@@ -18,7 +18,7 @@ class SetLocation extends StatelessWidget {
             children: [
               Expanded(
                 child: Container(
-                  padding: const EdgeInsets.only(top: 65, bottom: 26),
+                  // padding: const EdgeInsets.only(top: 65, bottom: 26),
                   // width: double.infinity,
                   // height: double.infinity,
                   child: SingleChildScrollView(
