@@ -45,6 +45,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:scrubtofit/screens/Standard_Subscribtion.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Free_Subscribtion extends StatelessWidget {
   const Free_Subscribtion({super.key});
@@ -59,214 +60,147 @@ class Free_Subscribtion extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                child: SizedBox(
-                  width: double.infinity,
-                  height: double.infinity,
                   child: SingleChildScrollView(
-                      child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      IntrinsicHeight(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(35),
-                            gradient: const LinearGradient(
-                              begin: Alignment(0, -1),
-                              end: Alignment(0, 0.9999999999999998),
-                              colors: [
-                                Color(0xFFF52B2B),
-                                Color(0xFFA20E04),
-                              ],
+                child: Container(
+                  width: 350,
+                  height: 624,
+                  clipBehavior: Clip.hardEdge,
+                  decoration: const BoxDecoration(),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 350,
+                            height: 624,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(35),
+                              gradient: const LinearGradient(
+                                colors: [Color(0xFFF52B2B), Color(0xFFA20E04)],
+                              ),
                             ),
                           ),
-                          padding: const EdgeInsets.only(
-                              top: 40, bottom: 30, left: 30, right: 30),
-                          width: double.infinity,
-                          child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  margin: const EdgeInsets.only(bottom: 17),
-                                  child: const Text(
-                                    'Free',
-                                    style: TextStyle(
-                                      color: Color(0xFFffffff),
-                                      fontSize: 26,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                                GestureDetector(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const StandardSubscribtion()),
-                                    );
-                                  },
-                                ),
-                                IntrinsicHeight(
-                                  child: Container(
-                                    margin: const EdgeInsets.only(bottom: 64),
-                                    width: double.infinity,
-                                    child: Row(children: [
-                                      Container(
-                                        margin: const EdgeInsets.only(right: 3),
-                                        child: const Text(
-                                          '\$0',
-                                          style: TextStyle(
-                                            color: Color(0xFFffffff),
-                                            fontSize: 46,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                      const Expanded(
-                                        child: SizedBox(
-                                          width: double.infinity,
-                                          child: Text(
-                                            '/mo',
-                                            style: TextStyle(
-                                              color: Color(0xFFffffff),
-                                              fontSize: 30,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ]),
-                                  ),
-                                ),
-                                IntrinsicHeight(
-                                  child: Container(
-                                    margin: const EdgeInsets.only(bottom: 31),
-                                    width: double.infinity,
-                                    child: Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Container(
-                                              margin:
-                                                  const EdgeInsets.only(right: 13),
-                                              width: 22,
-                                              height: 22,
-                                              child: Image.network(
-                                                'https://i.imgur.com/1tMFzp8.png',
-                                                fit: BoxFit.fill,
-                                              )),
-                                          Expanded(
-                                            child: Container(
-                                              margin: const EdgeInsets.only(top: 2),
-                                              width: double.infinity,
-                                              child: const Text(
-                                                '\nVoice messages anywhere',
-                                                style: TextStyle(
-                                                  color: Color(0xFFe6f5ff),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ]),
-                                  ),
-                                ),
-                                IntrinsicHeight(
-                                  child: Container(
-                                    margin: const EdgeInsets.only(bottom: 31),
-                                    width: double.infinity,
-                                    child: Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Container(
-                                              margin:
-                                                  const EdgeInsets.only(right: 13),
-                                              width: 22,
-                                              height: 22,
-                                              child: Image.network(
-                                                'https://i.imgur.com/1tMFzp8.png',
-                                                fit: BoxFit.fill,
-                                              )),
-                                          Expanded(
-                                            child: Container(
-                                              margin: const EdgeInsets.only(top: 2),
-                                              width: double.infinity,
-                                              child: const Text(
-                                                '\nVoice messages anywhere',
-                                                style: TextStyle(
-                                                  color: Color(0xFFe6f5ff),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ]),
-                                  ),
-                                ),
-                                IntrinsicHeight(
-                                  child: Container(
-                                    margin: const EdgeInsets.only(bottom: 158),
-                                    width: double.infinity,
-                                    child: Row(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Container(
-                                              margin:
-                                                  const EdgeInsets.only(right: 13),
-                                              width: 22,
-                                              height: 22,
-                                              child: Image.network(
-                                                'https://i.imgur.com/1tMFzp8.png',
-                                                fit: BoxFit.fill,
-                                              )),
-                                          Expanded(
-                                            child: Container(
-                                              margin: const EdgeInsets.only(top: 2),
-                                              width: double.infinity,
-                                              child: const Text(
-                                                '\nVoice messages anywhere',
-                                                style: TextStyle(
-                                                  color: Color(0xFFe6f5ff),
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ]),
-                                  ),
-                                ),
-                                IntrinsicHeight(
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(14),
-                                      color: const Color(0xFFFFFFFF),
-                                    ),
-                                    padding: const EdgeInsets.symmetric(vertical: 16),
-                                    width: double.infinity,
-                                    child: const Column(children: [
-                                      Text(
-                                        'Already using',
-                                        style: TextStyle(
-                                          color: Color(0xFF2743fd),
-                                          fontSize: 26,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ]),
-                                  ),
-                                ),
-                              ]),
                         ),
-                      ),
-                    ],
-                  )),
+                        Positioned(
+                          left: 29,
+                          top: 29,
+                          child: SizedBox(
+                            width: 325,
+                            child: Text(
+                              'Free',
+                              style: GoogleFonts.getFont(
+                                'Poppins',
+                                color: Colors.white,
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 1.3,
+                              ),
+                            ),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const StandardSubscribtion()),
+                            );
+                          },
+                        ),
+                        Positioned(
+                          left: 29,
+                          top: 68,
+                          child: Text(
+                            '\$0',
+                            style: GoogleFonts.getFont(
+                              'Poppins',
+                              color: Colors.white,
+                              fontSize: 46,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 90,
+                          top: 74,
+                          child: SizedBox(
+                            width: 69,
+                            height: 59,
+                            child: RichText(
+                              text: TextSpan(
+                                style: GoogleFonts.getFont(
+                                  'Poppins',
+                                  color: Colors.white,
+                                  fontSize: 30,
+                                ),
+                                children: [
+                                  const TextSpan(text: '/'),
+                                  TextSpan(
+                                    text: 'mo',
+                                    style: GoogleFonts.getFont(
+                                      'Poppins',
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 30,
+                          top: 193,
+                          child: Image.network(
+                            'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT4WAuv5eUmaaLuCK8f%2Fec2b031ed16aef4e8e763a2b2b7c8c99.png',
+                            width: 212,
+                            height: 193,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        Positioned(
+                          left: 30,
+                          top: 539,
+                          child: Container(
+                            width: 290,
+                            height: 55,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(14),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 29,
+                          top: 538,
+                          child: SizedBox(
+                            width: 295,
+                            height: 57,
+                            child: Text(
+                              'Already using',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.getFont(
+                                'Poppins',
+                                color: const Color(0xC12743FD),
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 1.3,
+                                height: 1.2,
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                 ),
-              ),
+              ))
             ],
           ),
         ),
