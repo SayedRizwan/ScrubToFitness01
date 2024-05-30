@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrubtofit/screens/Home01.dart';
 import 'package:scrubtofit/screens/TwoFactorAuth01.dart';
 
 class Login01 extends StatelessWidget {
@@ -10,8 +9,8 @@ class Login01 extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          constraints: BoxConstraints.expand(),
-          color: Color(0xFFFFFFFF),
+          constraints: const BoxConstraints.expand(),
+          color: const Color(0xFFFFFFFF),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -99,7 +98,7 @@ class Login01 extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => new Twofactorauth01()),
+                                builder: (context) => const Twofactorauth01()),
                           );
                         },
                       ),

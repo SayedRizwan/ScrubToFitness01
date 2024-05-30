@@ -10,13 +10,13 @@ class SpalshScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          constraints: BoxConstraints.expand(),
-          color: Color(0xFFFFFFFF),
+          constraints: const BoxConstraints.expand(),
+          color: const Color(0xFFFFFFFF),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                child: Container(
+                child: SizedBox(
                   width: double.infinity,
                   height: double.infinity,
                   child: SingleChildScrollView(
@@ -48,8 +48,8 @@ class SpalshScreen extends StatelessWidget {
                               Material(
                                 type: MaterialType.transparency,
                                 child: InkWell(
-                                  overlayColor: MaterialStateProperty.all(
-                                      Color(0x0c7f7f7f)),
+                                  overlayColor: WidgetStateProperty.all(
+                                      const Color(0x0c7f7f7f)),
                                   borderRadius: BorderRadius.circular(30),
                                   child: Stack(
                                     children: [
@@ -73,7 +73,7 @@ class SpalshScreen extends StatelessWidget {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    new LoginSignUp()),
+                                                    const LoginSignUp()),
                                           );
                                         },
                                       ),

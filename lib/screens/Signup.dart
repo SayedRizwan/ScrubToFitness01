@@ -9,13 +9,13 @@ class Signup extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          constraints: BoxConstraints.expand(),
-          color: Color(0xFFFFFFFF),
+          constraints: const BoxConstraints.expand(),
+          color: const Color(0xFFFFFFFF),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                child: Container(
+                child: SizedBox(
                   width: double.infinity,
                   height: double.infinity,
                   child: SingleChildScrollView(
@@ -95,7 +95,7 @@ class Signup extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            new Choosegender()),
+                                            const Choosegender()),
                                   );
                                 },
                               ),

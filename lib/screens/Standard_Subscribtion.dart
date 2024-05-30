@@ -9,8 +9,8 @@ class StandardSubscribtion extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          constraints: BoxConstraints.expand(),
-          color: Color(0xFFFFFFFF),
+          constraints: const BoxConstraints.expand(),
+          color: const Color(0xFFFFFFFF),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -64,7 +64,7 @@ class StandardSubscribtion extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      new Premium_subscription()),
+                                      const Premium_subscription()),
                             );
                           },
                         ),

@@ -27,7 +27,7 @@ class SplashScreenCode extends StatelessWidget {
           Material(
             type: MaterialType.transparency,
             child: InkWell(
-              overlayColor: MaterialStateProperty.all(Color(0x0c7f7f7f)),
+              overlayColor: WidgetStateProperty.all(const Color(0x0c7f7f7f)),
               borderRadius: BorderRadius.circular(30),
               child: Stack(
                 children: [

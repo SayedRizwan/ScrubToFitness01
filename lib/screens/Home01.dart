@@ -12,8 +12,8 @@ class Home01 extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          constraints: BoxConstraints.expand(),
-          color: Color(0xFFFFFFFF),
+          constraints: const BoxConstraints.expand(),
+          color: const Color(0xFFFFFFFF),
           child: SingleChildScrollView(
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -121,7 +121,7 @@ class Home01 extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => new Home02()),
+                                builder: (context) => const Home02()),
                           );
                         },
                       ),

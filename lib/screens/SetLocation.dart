@@ -11,14 +11,14 @@ class SetLocation extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          constraints: BoxConstraints.expand(),
-          color: Color(0xFFFFFFFF),
+          constraints: const BoxConstraints.expand(),
+          color: const Color(0xFFFFFFFF),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
                 child: Container(
-                  padding: EdgeInsets.only(top: 65, bottom: 26),
+                  padding: const EdgeInsets.only(top: 65, bottom: 26),
                   // width: double.infinity,
                   // height: double.infinity,
                   child: SingleChildScrollView(
@@ -55,7 +55,7 @@ class SetLocation extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => new Bookingdate()),
+                                    builder: (context) => const Bookingdate()),
                               );
                             },
                           ),

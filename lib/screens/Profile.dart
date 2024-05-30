@@ -11,14 +11,14 @@ class Profile extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          constraints: BoxConstraints.expand(),
-          color: Color(0xFFFFFFFF),
+          constraints: const BoxConstraints.expand(),
+          color: const Color(0xFFFFFFFF),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
                 child: Container(
-                  padding: EdgeInsets.only(top: 42, bottom: 42, left: 30),
+                  padding: const EdgeInsets.only(top: 42, bottom: 42, left: 30),
                   width: double.infinity,
                   height: double.infinity,
                   child: SingleChildScrollView(
@@ -88,7 +88,7 @@ class Profile extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            new StandardSubscribtion()),
+                                            const StandardSubscribtion()),
                                   );
                                 },
                               ),
@@ -120,7 +120,7 @@ class Profile extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            new Free_Subscribtion()),
+                                            const Free_Subscribtion()),
                                   );
                                 },
                               ),

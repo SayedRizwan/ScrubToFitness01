@@ -6,14 +6,14 @@ class Name extends StatelessWidget {
 		return Scaffold(
 			body: SafeArea(
 				child: Container(
-					constraints: BoxConstraints.expand(),
-					color: Color(0xFFFFFFFF),
+					constraints: const BoxConstraints.expand(),
+					color: const Color(0xFFFFFFFF),
 					child: Column(
 						crossAxisAlignment: CrossAxisAlignment.start,
 						children: [
 							Expanded(
 								child: Container(
-									decoration: BoxDecoration(
+									decoration: const BoxDecoration(
 										gradient: LinearGradient(
 											begin: Alignment(0, -1),
 											end: Alignment(0, 0.9999999999999998),
@@ -23,7 +23,7 @@ class Name extends StatelessWidget {
 											],
 										),
 									),
-									padding: EdgeInsets.only( top: 192, bottom: 218),
+									padding: const EdgeInsets.only( top: 192, bottom: 218),
 									width: double.infinity,
 									height: double.infinity,
 									child: SingleChildScrollView(
@@ -31,8 +31,8 @@ class Name extends StatelessWidget {
 											crossAxisAlignment: CrossAxisAlignment.start,
 											children: [
 												Container(
-													margin: EdgeInsets.only( bottom: 32, left: 56),
-													child: Text(
+													margin: const EdgeInsets.only( bottom: 32, left: 56),
+													child: const Text(
 														'Whats your name?',
 														style: TextStyle(
 															color: Color(0xFFffffff),
@@ -44,22 +44,22 @@ class Name extends StatelessWidget {
 												Container(
 													decoration: BoxDecoration(
 														border: Border.all(
-															color: Color(0xFF32A4FB),
+															color: const Color(0xFF32A4FB),
 															width: 5,
 														),
 														borderRadius: BorderRadius.circular(100),
 													),
-													margin: EdgeInsets.only( bottom: 40, left: 138, right: 138),
+													margin: const EdgeInsets.only( bottom: 40, left: 138, right: 138),
 													height: 98,
 													width: double.infinity,
-													child: SizedBox(),
+													child: const SizedBox(),
 												),
 												IntrinsicHeight(
 													child: Container(
 														decoration: BoxDecoration(
 															borderRadius: BorderRadius.circular(50),
-															color: Color(0xFFFFFFFF),
-															boxShadow: [
+															color: const Color(0xFFFFFFFF),
+															boxShadow: const [
 																BoxShadow(
 																	color: Color(0x1A000000),
 																	blurRadius: 10,
@@ -67,10 +67,10 @@ class Name extends StatelessWidget {
 																),
 															],
 														),
-														padding: EdgeInsets.symmetric(vertical: 13),
-														margin: EdgeInsets.only( bottom: 76, left: 78, right: 78),
+														padding: const EdgeInsets.symmetric(vertical: 13),
+														margin: const EdgeInsets.only( bottom: 76, left: 78, right: 78),
 														width: double.infinity,
-														child: Column(
+														child: const Column(
 															children: [
 																Text(
 																	'Justin Nguyen',
@@ -88,8 +88,8 @@ class Name extends StatelessWidget {
 													child: Container(
 														decoration: BoxDecoration(
 															borderRadius: BorderRadius.circular(50),
-															color: Color(0xFFFFFFFF),
-															boxShadow: [
+															color: const Color(0xFFFFFFFF),
+															boxShadow: const [
 																BoxShadow(
 																	color: Color(0x1A000000),
 																	blurRadius: 8,
@@ -97,10 +97,10 @@ class Name extends StatelessWidget {
 																),
 															],
 														),
-														padding: EdgeInsets.symmetric(vertical: 21),
-														margin: EdgeInsets.only( bottom: 21, left: 113, right: 113),
+														padding: const EdgeInsets.symmetric(vertical: 21),
+														margin: const EdgeInsets.only( bottom: 21, left: 113, right: 113),
 														width: double.infinity,
-														child: Column(
+														child: const Column(
 															children: [
 																Text(
 																	'Sign Up',
@@ -116,7 +116,7 @@ class Name extends StatelessWidget {
 												),
 												IntrinsicHeight(
 													child: Container(
-														margin: EdgeInsets.symmetric(horizontal: 153),
+														margin: const EdgeInsets.symmetric(horizontal: 153),
 														width: double.infinity,
 														child: Row(
 															mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -124,29 +124,29 @@ class Name extends StatelessWidget {
 																Container(
 																	decoration: BoxDecoration(
 																		borderRadius: BorderRadius.circular(50),
-																		color: Color(0xFFFFFFFF),
+																		color: const Color(0xFFFFFFFF),
 																	),
 																	width: 14,
 																	height: 7,
-																	child: SizedBox(),
+																	child: const SizedBox(),
 																),
 																Container(
 																	decoration: BoxDecoration(
 																		borderRadius: BorderRadius.circular(50),
-																		color: Color(0xFFFFFFFF),
+																		color: const Color(0xFFFFFFFF),
 																	),
 																	width: 14,
 																	height: 7,
-																	child: SizedBox(),
+																	child: const SizedBox(),
 																),
 																Container(
 																	decoration: BoxDecoration(
 																		borderRadius: BorderRadius.circular(50),
-																		color: Color(0xFFFFFFFF),
+																		color: const Color(0xFFFFFFFF),
 																	),
 																	width: 30,
 																	height: 7,
-																	child: SizedBox(),
+																	child: const SizedBox(),
 																),
 															]
 														),

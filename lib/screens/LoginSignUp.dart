@@ -10,13 +10,13 @@ class LoginSignUp extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          constraints: BoxConstraints.expand(),
-          color: Color(0xFFFFFFFF),
+          constraints: const BoxConstraints.expand(),
+          color: const Color(0xFFFFFFFF),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                child: Container(
+                child: SizedBox(
                   width: double.infinity,
                   height: double.infinity,
                   child: SingleChildScrollView(
@@ -79,7 +79,7 @@ class LoginSignUp extends StatelessWidget {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    new Login01()),
+                                                    const Login01()),
                                           );
                                         },
                                       ),
@@ -149,7 +149,7 @@ class LoginSignUp extends StatelessWidget {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    new Signup()),
+                                                    const Signup()),
                                           );
                                         },
                                       ),

@@ -11,14 +11,14 @@ class Bookingdate extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          constraints: BoxConstraints.expand(),
-          color: Color(0xFFFFFFFF),
+          constraints: const BoxConstraints.expand(),
+          color: const Color(0xFFFFFFFF),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
                 child: Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment(0, -1),
                       end: Alignment(0, 0.9999999999999998),
@@ -29,7 +29,7 @@ class Bookingdate extends StatelessWidget {
                     ),
                   ),
                   padding:
-                      EdgeInsets.only(top: 10, bottom: 5, left: 5, right: 5),
+                      const EdgeInsets.only(top: 10, bottom: 5, left: 5, right: 5),
                   child: SingleChildScrollView(
                       child: Container(
                     width: 375,
@@ -205,7 +205,7 @@ class Bookingdate extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => new Appointments()),
+                                    builder: (context) => const Appointments()),
                               );
                             },
                           ),

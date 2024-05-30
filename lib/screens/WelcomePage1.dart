@@ -6,8 +6,8 @@ class WelcomePage1 extends StatelessWidget {
 		return Scaffold(
 			body: SafeArea(
 				child: Container(
-					constraints: BoxConstraints.expand(),
-					color: Color(0xFFFFFFFF),
+					constraints: const BoxConstraints.expand(),
+					color: const Color(0xFFFFFFFF),
 					child: Column(
 						crossAxisAlignment: CrossAxisAlignment.start,
 						children: [
@@ -15,7 +15,7 @@ class WelcomePage1 extends StatelessWidget {
 								child: Container(
 									decoration: BoxDecoration(
 										borderRadius: BorderRadius.circular(30),
-										gradient: LinearGradient(
+										gradient: const LinearGradient(
 											begin: Alignment(0, -1),
 											end: Alignment(0, 0.9999999999999998),
 											colors: [
@@ -24,10 +24,10 @@ class WelcomePage1 extends StatelessWidget {
 											],
 										),
 									),
-									padding: EdgeInsets.only( top: 449, bottom: 319, left: 136, right: 136),
+									padding: const EdgeInsets.only( top: 449, bottom: 319, left: 136, right: 136),
 									width: double.infinity,
 									height: double.infinity,
-									child: SingleChildScrollView(
+									child: const SingleChildScrollView(
 										child: Column(
 											crossAxisAlignment: CrossAxisAlignment.start,
 											children: [

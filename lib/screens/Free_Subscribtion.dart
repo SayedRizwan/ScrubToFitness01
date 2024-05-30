@@ -53,13 +53,13 @@ class Free_Subscribtion extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          constraints: BoxConstraints.expand(),
-          color: Color(0xFFFFFFFF),
+          constraints: const BoxConstraints.expand(),
+          color: const Color(0xFFFFFFFF),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                child: Container(
+                child: SizedBox(
                   width: double.infinity,
                   height: double.infinity,
                   child: SingleChildScrollView(
@@ -70,7 +70,7 @@ class Free_Subscribtion extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(35),
-                            gradient: LinearGradient(
+                            gradient: const LinearGradient(
                               begin: Alignment(0, -1),
                               end: Alignment(0, 0.9999999999999998),
                               colors: [
@@ -79,15 +79,15 @@ class Free_Subscribtion extends StatelessWidget {
                               ],
                             ),
                           ),
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               top: 40, bottom: 30, left: 30, right: 30),
                           width: double.infinity,
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
-                                  margin: EdgeInsets.only(bottom: 17),
-                                  child: Text(
+                                  margin: const EdgeInsets.only(bottom: 17),
+                                  child: const Text(
                                     'Free',
                                     style: TextStyle(
                                       color: Color(0xFFffffff),
@@ -102,18 +102,18 @@ class Free_Subscribtion extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              new StandardSubscribtion()),
+                                              const StandardSubscribtion()),
                                     );
                                   },
                                 ),
                                 IntrinsicHeight(
                                   child: Container(
-                                    margin: EdgeInsets.only(bottom: 64),
+                                    margin: const EdgeInsets.only(bottom: 64),
                                     width: double.infinity,
                                     child: Row(children: [
                                       Container(
-                                        margin: EdgeInsets.only(right: 3),
-                                        child: Text(
+                                        margin: const EdgeInsets.only(right: 3),
+                                        child: const Text(
                                           '\$0',
                                           style: TextStyle(
                                             color: Color(0xFFffffff),
@@ -122,8 +122,8 @@ class Free_Subscribtion extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      Expanded(
-                                        child: Container(
+                                      const Expanded(
+                                        child: SizedBox(
                                           width: double.infinity,
                                           child: Text(
                                             '/mo',
@@ -140,7 +140,7 @@ class Free_Subscribtion extends StatelessWidget {
                                 ),
                                 IntrinsicHeight(
                                   child: Container(
-                                    margin: EdgeInsets.only(bottom: 31),
+                                    margin: const EdgeInsets.only(bottom: 31),
                                     width: double.infinity,
                                     child: Row(
                                         crossAxisAlignment:
@@ -148,7 +148,7 @@ class Free_Subscribtion extends StatelessWidget {
                                         children: [
                                           Container(
                                               margin:
-                                                  EdgeInsets.only(right: 13),
+                                                  const EdgeInsets.only(right: 13),
                                               width: 22,
                                               height: 22,
                                               child: Image.network(
@@ -157,9 +157,9 @@ class Free_Subscribtion extends StatelessWidget {
                                               )),
                                           Expanded(
                                             child: Container(
-                                              margin: EdgeInsets.only(top: 2),
+                                              margin: const EdgeInsets.only(top: 2),
                                               width: double.infinity,
-                                              child: Text(
+                                              child: const Text(
                                                 '\nVoice messages anywhere',
                                                 style: TextStyle(
                                                   color: Color(0xFFe6f5ff),
@@ -174,7 +174,7 @@ class Free_Subscribtion extends StatelessWidget {
                                 ),
                                 IntrinsicHeight(
                                   child: Container(
-                                    margin: EdgeInsets.only(bottom: 31),
+                                    margin: const EdgeInsets.only(bottom: 31),
                                     width: double.infinity,
                                     child: Row(
                                         crossAxisAlignment:
@@ -182,7 +182,7 @@ class Free_Subscribtion extends StatelessWidget {
                                         children: [
                                           Container(
                                               margin:
-                                                  EdgeInsets.only(right: 13),
+                                                  const EdgeInsets.only(right: 13),
                                               width: 22,
                                               height: 22,
                                               child: Image.network(
@@ -191,9 +191,9 @@ class Free_Subscribtion extends StatelessWidget {
                                               )),
                                           Expanded(
                                             child: Container(
-                                              margin: EdgeInsets.only(top: 2),
+                                              margin: const EdgeInsets.only(top: 2),
                                               width: double.infinity,
-                                              child: Text(
+                                              child: const Text(
                                                 '\nVoice messages anywhere',
                                                 style: TextStyle(
                                                   color: Color(0xFFe6f5ff),
@@ -208,7 +208,7 @@ class Free_Subscribtion extends StatelessWidget {
                                 ),
                                 IntrinsicHeight(
                                   child: Container(
-                                    margin: EdgeInsets.only(bottom: 158),
+                                    margin: const EdgeInsets.only(bottom: 158),
                                     width: double.infinity,
                                     child: Row(
                                         crossAxisAlignment:
@@ -216,7 +216,7 @@ class Free_Subscribtion extends StatelessWidget {
                                         children: [
                                           Container(
                                               margin:
-                                                  EdgeInsets.only(right: 13),
+                                                  const EdgeInsets.only(right: 13),
                                               width: 22,
                                               height: 22,
                                               child: Image.network(
@@ -225,9 +225,9 @@ class Free_Subscribtion extends StatelessWidget {
                                               )),
                                           Expanded(
                                             child: Container(
-                                              margin: EdgeInsets.only(top: 2),
+                                              margin: const EdgeInsets.only(top: 2),
                                               width: double.infinity,
-                                              child: Text(
+                                              child: const Text(
                                                 '\nVoice messages anywhere',
                                                 style: TextStyle(
                                                   color: Color(0xFFe6f5ff),
@@ -244,11 +244,11 @@ class Free_Subscribtion extends StatelessWidget {
                                   child: Container(
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(14),
-                                      color: Color(0xFFFFFFFF),
+                                      color: const Color(0xFFFFFFFF),
                                     ),
-                                    padding: EdgeInsets.symmetric(vertical: 16),
+                                    padding: const EdgeInsets.symmetric(vertical: 16),
                                     width: double.infinity,
-                                    child: Column(children: [
+                                    child: const Column(children: [
                                       Text(
                                         'Already using',
                                         style: TextStyle(

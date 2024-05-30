@@ -9,15 +9,15 @@ class HealthTraking extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          constraints: BoxConstraints.expand(),
-          color: Color(0xFFFFFFFF),
+          constraints: const BoxConstraints.expand(),
+          color: const Color(0xFFFFFFFF),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
                 child: Container(
                   padding:
-                      EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
+                      const EdgeInsets.only(top: 5, bottom: 5, left: 5, right: 5),
                   child: SingleChildScrollView(
                       child: Container(
                     width: 375,
@@ -77,7 +77,7 @@ class HealthTraking extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => new Profile()),
+                                    builder: (context) => const Profile()),
                               );
                             },
                           ),

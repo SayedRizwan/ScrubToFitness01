@@ -1,23 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:scrubtofit/screens/BookingDate.dart';
-import 'package:scrubtofit/screens/ChooseAge.dart';
-import 'package:scrubtofit/screens/Home01.dart';
-import 'package:scrubtofit/screens/Home02.dart';
-import 'package:scrubtofit/screens/Login01.dart';
-import 'package:scrubtofit/screens/LoginSignUp.dart';
-import 'package:scrubtofit/screens/Profile.dart';
-import 'package:scrubtofit/screens/SetLocation.dart';
-import 'package:scrubtofit/screens/Signup.dart';
-import 'package:scrubtofit/screens/WelcomePage1.dart';
-import 'package:scrubtofit/screens/pages/signinup.dart';
-import 'package:scrubtofit/screens/splash_screen_code.dart';
 import 'package:scrubtofit/screens/SpalshScreen.dart';
-import 'package:scrubtofit/screens/pages/signinup.dart';
 
-import 'package:scrubtofit/screens/HealthTraking.dart';
-import 'package:scrubtofit/screens/ChooseGender.dart';
-import 'package:scrubtofit/screens/Free_Subscribtion.dart';
 
 void main() => runApp(const MyApp());
 
@@ -26,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter App',
       home: Scaffold(
         //body: Appointments(),
