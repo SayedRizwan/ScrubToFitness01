@@ -1,166 +1,244 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:scrubtofit/screens/Home01.dart';
+
 class Name extends StatelessWidget {
-	const Name({super.key});
-	@override
-	Widget build(BuildContext context) {
-		return Scaffold(
-			body: SafeArea(
-				child: Container(
-					constraints: const BoxConstraints.expand(),
-					color: const Color(0xFFFFFFFF),
-					child: Column(
-						crossAxisAlignment: CrossAxisAlignment.start,
-						children: [
-							Expanded(
-								child: Container(
-									decoration: const BoxDecoration(
-										gradient: LinearGradient(
-											begin: Alignment(0, -1),
-											end: Alignment(0, 0.9999999999999998),
-											colors: [
-												Color(0xFFF52B2B),
-												Color(0xFFAD1007),
-											],
-										),
-									),
-									padding: const EdgeInsets.only( top: 192, bottom: 218),
-									width: double.infinity,
-									height: double.infinity,
-									child: SingleChildScrollView(
-										child: Column(
-											crossAxisAlignment: CrossAxisAlignment.start,
-											children: [
-												Container(
-													margin: const EdgeInsets.only( bottom: 32, left: 56),
-													child: const Text(
-														'Whats your name?',
-														style: TextStyle(
-															color: Color(0xFFffffff),
-															fontSize: 30,
-															fontWeight: FontWeight.bold,
-														),
-													),
-												),
-												Container(
-													decoration: BoxDecoration(
-														border: Border.all(
-															color: const Color(0xFF32A4FB),
-															width: 5,
-														),
-														borderRadius: BorderRadius.circular(100),
-													),
-													margin: const EdgeInsets.only( bottom: 40, left: 138, right: 138),
-													height: 98,
-													width: double.infinity,
-													child: const SizedBox(),
-												),
-												IntrinsicHeight(
-													child: Container(
-														decoration: BoxDecoration(
-															borderRadius: BorderRadius.circular(50),
-															color: const Color(0xFFFFFFFF),
-															boxShadow: const [
-																BoxShadow(
-																	color: Color(0x1A000000),
-																	blurRadius: 10,
-																	offset: Offset(0, 2),
-																),
-															],
-														),
-														padding: const EdgeInsets.symmetric(vertical: 13),
-														margin: const EdgeInsets.only( bottom: 76, left: 78, right: 78),
-														width: double.infinity,
-														child: const Column(
-															children: [
-																Text(
-																	'Justin Nguyen',
-																	style: TextStyle(
-																		color: Color(0xFFf90217),
-																		fontSize: 16,
-																		fontWeight: FontWeight.bold,
-																	),
-																),
-															]
-														),
-													),
-												),
-												IntrinsicHeight(
-													child: Container(
-														decoration: BoxDecoration(
-															borderRadius: BorderRadius.circular(50),
-															color: const Color(0xFFFFFFFF),
-															boxShadow: const [
-																BoxShadow(
-																	color: Color(0x1A000000),
-																	blurRadius: 8,
-																	offset: Offset(0, 4),
-																),
-															],
-														),
-														padding: const EdgeInsets.symmetric(vertical: 21),
-														margin: const EdgeInsets.only( bottom: 21, left: 113, right: 113),
-														width: double.infinity,
-														child: const Column(
-															children: [
-																Text(
-																	'Sign Up',
-																	style: TextStyle(
-																		color: Color(0xFFf90217),
-																		fontSize: 18,
-																		fontWeight: FontWeight.bold,
-																	),
-																),
-															]
-														),
-													),
-												),
-												IntrinsicHeight(
-													child: Container(
-														margin: const EdgeInsets.symmetric(horizontal: 153),
-														width: double.infinity,
-														child: Row(
-															mainAxisAlignment: MainAxisAlignment.spaceBetween,
-															children: [
-																Container(
-																	decoration: BoxDecoration(
-																		borderRadius: BorderRadius.circular(50),
-																		color: const Color(0xFFFFFFFF),
-																	),
-																	width: 14,
-																	height: 7,
-																	child: const SizedBox(),
-																),
-																Container(
-																	decoration: BoxDecoration(
-																		borderRadius: BorderRadius.circular(50),
-																		color: const Color(0xFFFFFFFF),
-																	),
-																	width: 14,
-																	height: 7,
-																	child: const SizedBox(),
-																),
-																Container(
-																	decoration: BoxDecoration(
-																		borderRadius: BorderRadius.circular(50),
-																		color: const Color(0xFFFFFFFF),
-																	),
-																	width: 30,
-																	height: 7,
-																	child: const SizedBox(),
-																),
-															]
-														),
-													),
-												),
-											],
-										)
-									),
-								),
-							),
-						],
-					),
-				),
-			),
-		);
-	}
+  const Name({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          constraints: const BoxConstraints.expand(),
+          color: const Color(0xFFFFFFFF),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                // child: Container(
+                //   decoration: const BoxDecoration(
+                //     gradient: LinearGradient(
+                //       begin: Alignment(0, -1),
+                //       end: Alignment(0, 0.9999999999999998),
+                //       colors: [
+                //         Color(0xFFF52B2B),
+                //         Color(0xFFAD1007),
+                //       ],
+                //     ),
+                //   ),
+                // padding: const EdgeInsets.only( top: 192, bottom: 218),
+                // width: double.infinity,
+                // height: double.infinity,
+                child: SingleChildScrollView(
+                    child: Container(
+                  width: 375,
+                  height: 812,
+                  clipBehavior: Clip.hardEdge,
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Color(0xFFF52B2B), Color(0xFFAD1007)],
+                    ),
+                  ),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        Positioned(
+                          left: -335,
+                          top: 213,
+                          child: Text(
+                            'Select Age',
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.getFont(
+                              'Nunito',
+                              color: Colors.black,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              height: 1.2,
+                            ),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Home01()),
+                            );
+                          },
+                        ),
+                        Positioned(
+                          left: 113,
+                          top: 507,
+                          child: Container(
+                            width: 149,
+                            height: 59,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(50),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color(0x19000000),
+                                  spreadRadius: 0,
+                                  offset: Offset(0, 4),
+                                  blurRadius: 8,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 79,
+                          top: 392,
+                          child: Container(
+                            width: 218,
+                            height: 39,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(50),
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color(0x19000000),
+                                  spreadRadius: 0,
+                                  offset: Offset(0, 2),
+                                  blurRadius: 10,
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 136,
+                          top: 401,
+                          child: Text(
+                            'Justin Nguyen',
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.getFont(
+                              'Nunito',
+                              color: const Color(0xFFF90217),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              height: 1.2,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 154,
+                          top: 523,
+                          child: Text(
+                            'Sign Up',
+                            style: GoogleFonts.getFont(
+                              'Nunito',
+                              color: const Color(0xFFF90217),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 56,
+                          top: 185,
+                          child: Text(
+                            'Whats your name?',
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.getFont(
+                              'Nunito',
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              height: 1.2,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 191,
+                          top: 587,
+                          child: Container(
+                            width: 30,
+                            height: 7,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 172,
+                          top: 587,
+                          child: Container(
+                            width: 14,
+                            height: 7,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 153,
+                          top: 587,
+                          child: Container(
+                            width: 14,
+                            height: 7,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 139,
+                          top: 254,
+                          child: Container(
+                            width: 98,
+                            height: 98,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(
+                              image: const DecorationImage(
+                                image: NetworkImage(
+                                  'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RT4WAuv5eUmaaLuCK8f%2F8b2f5c26b414bf3e29ac71c28b2807dd1adfefceChange%20Image.png?alt=media&token=7c1abec7-4788-4fec-ae0f-68d32e23e627',
+                                ),
+                                fit: BoxFit.cover,
+                              ),
+                              border: Border.all(
+                                width: 2,
+                                color: const Color(0x33000000),
+                              ),
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 139,
+                          top: 254,
+                          child: Container(
+                            width: 98,
+                            height: 98,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 5,
+                                color: const Color(0xFF32A4FB),
+                              ),
+                              borderRadius: BorderRadius.circular(100),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                )),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
