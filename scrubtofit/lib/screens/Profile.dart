@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrub_to_fitness/screens/Free_Subscribtion.dart';
+import 'package:scrubtofit/screens/Free_Subscribtion.dart';
 import 'dart:math';
 import 'Standard_Subscribtion.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrub_to_fitness/screens/Premium_subs.dart';
+import 'package:scrubtofit/screens/Premium_subs.dart';
 
 class StandardSubscribtion extends StatelessWidget {
   const StandardSubscribtion({super.key});

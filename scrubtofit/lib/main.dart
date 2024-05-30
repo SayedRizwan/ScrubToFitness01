@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
-import 'package:scrub_to_fitness/screens/BookingDate.dart';
-import 'package:scrub_to_fitness/screens/ChooseAge.dart';
-import 'package:scrub_to_fitness/screens/Home01.dart';
-import 'package:scrub_to_fitness/screens/Home02.dart';
-import 'package:scrub_to_fitness/screens/Login01.dart';
-import 'package:scrub_to_fitness/screens/LoginSignUp.dart';
-import 'package:scrub_to_fitness/screens/Profile.dart';
-import 'package:scrub_to_fitness/screens/SetLocation.dart';
-import 'package:scrub_to_fitness/screens/Signup.dart';
-import 'package:scrub_to_fitness/screens/WelcomePage1.dart';
-import 'package:scrub_to_fitness/screens/pages/signinup.dart';
-import 'package:scrub_to_fitness/screens/splash_screen_code.dart';
-import 'package:scrub_to_fitness/screens/SpalshScreen.dart';
-import 'package:scrub_to_fitness/screens/pages/signinup.dart';
-import 'package:scrub_to_fitness/screens/pages/sign_up_screen.dart';
-import 'package:scrub_to_fitness/screens/HealthTraking.dart';
-import 'package:scrub_to_fitness/screens/ChooseGender.dart';
-import 'package:scrub_to_fitness/screens/Free_Subscribtion.dart';
+import 'package:scrubtofit/screens/BookingDate.dart';
+import 'package:scrubtofit/screens/ChooseAge.dart';
+import 'package:scrubtofit/screens/Home01.dart';
+import 'package:scrubtofit/screens/Home02.dart';
+import 'package:scrubtofit/screens/Login01.dart';
+import 'package:scrubtofit/screens/LoginSignUp.dart';
+import 'package:scrubtofit/screens/Profile.dart';
+import 'package:scrubtofit/screens/SetLocation.dart';
+import 'package:scrubtofit/screens/Signup.dart';
+import 'package:scrubtofit/screens/WelcomePage1.dart';
+import 'package:scrubtofit/screens/pages/signinup.dart';
+import 'package:scrubtofit/screens/splash_screen_code.dart';
+import 'package:scrubtofit/screens/SpalshScreen.dart';
+import 'package:scrubtofit/screens/pages/signinup.dart';
+
+import 'package:scrubtofit/screens/HealthTraking.dart';
+import 'package:scrubtofit/screens/ChooseGender.dart';
+import 'package:scrubtofit/screens/Free_Subscribtion.dart';
 
 void main() => runApp(const MyApp());
 

@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrub_to_fitness/screens/Home02.dart';
+import 'package:scrubtofit/screens/Home02.dart';
 
 class Home01 extends StatelessWidget {
   const Home01({super.key});

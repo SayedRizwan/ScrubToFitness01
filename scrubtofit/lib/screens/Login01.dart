@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrub_to_fitness/screens/Home01.dart';
-import 'package:scrub_to_fitness/screens/TwoFactorAuth01.dart';
+import 'package:scrubtofit/screens/Home01.dart';
+import 'package:scrubtofit/screens/TwoFactorAuth01.dart';
 
 class Login01 extends StatelessWidget {
   const Login01({super.key});

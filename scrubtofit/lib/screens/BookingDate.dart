@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:math';
 
-import 'package:scrub_to_fitness/screens/Appointments.dart';
+import 'package:scrubtofit/screens/Appointments.dart';
 
 class Bookingdate extends StatelessWidget {
   const Bookingdate({super.key});

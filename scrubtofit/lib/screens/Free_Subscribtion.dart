@@ -44,7 +44,7 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:scrub_to_fitness/screens/Standard_Subscribtion.dart';
+import 'package:scrubtofit/screens/Standard_Subscribtion.dart';
 
 class Free_Subscribtion extends StatelessWidget {
   const Free_Subscribtion({super.key});

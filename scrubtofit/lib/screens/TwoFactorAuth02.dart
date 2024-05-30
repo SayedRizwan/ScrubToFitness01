@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:math';
 
-import 'package:scrub_to_fitness/screens/Home01.dart';
+import 'package:scrubtofit/screens/Home01.dart';
 
 class Twofactorauth02 extends StatelessWidget {
   const Twofactorauth02({super.key});

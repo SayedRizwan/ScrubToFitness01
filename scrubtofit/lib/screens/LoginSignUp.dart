@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:scrub_to_fitness/screens/Login01.dart';
-import 'package:scrub_to_fitness/screens/Signup.dart';
+import 'package:scrubtofit/screens/Login01.dart';
+import 'package:scrubtofit/screens/Signup.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginSignUp extends StatelessWidget {

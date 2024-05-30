@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrub_to_fitness/screens/Profile.dart';
+import 'package:scrubtofit/screens/Profile.dart';
 
 class HealthTraking extends StatelessWidget {
   const HealthTraking({super.key});
