@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:scrubtofit/screens/TwoFactorAuth01.dart';
-
+f
 class Login01 extends StatelessWidget {
   const Login01({super.key});
   @override
@@ -121,26 +121,38 @@ class Login01 extends StatelessWidget {
                       Positioned(
                         left: 315,
                         top: 399,
-                        child: Image.network(
-                          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2Fb4b64e62b1498cd5c3f017b608a6bc8a.png',
+                        child: Image.asset(
+                          'assets/app_icon.png',
                           width: 15,
                           height: 11,
-                          fit: BoxFit.contain,
+                          fit: BoxFit.cover,
                         ),
+                        // child: const ResizeImage(
+                        //   AssetImage('app_icon.png'),
+                        //   width: 150,
+                        //   height: 150,
+                        // ),
+                        // child: Image.network(
+                        //   'https://storage.googleapis 2com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2Fb4b64e62b1498cd5c3f017b608a6bc8a.png',
+                        //   width: 15,
+                        //   height: 11,
+                        //   fit: BoxFit.contain,
+                        // ),
                       ),
                       Positioned(
                         left: 44,
                         top: 395,
-                        child: Text(
-                          'itsmemamun1@gmail.com',
-                          style: GoogleFonts.getFont(
-                            'Rubik',
-                            color: const Color(0xFF677294),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w300,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            hintText: 'Email Address',
+
+                            // fontSize: 16,
+                            // fontWeight: FontWeight.w300,),
                           ),
                         ),
-                      ),
+                     
+                     
                       Positioned(
                         left: 20,
                         top: 450,
@@ -265,7 +277,7 @@ class Login01 extends StatelessWidget {
                         left: 314,
                         top: 470,
                         child: Image.network(
-                          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2Fa3977834b5e0178be09fee2e6b50a350.png',
+                          'https://storage.googlseapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2Fa3977834b5e0178be09fee2e6b50a350.png',
                           width: 16,
                           height: 14,
                           fit: BoxFit.contain,

@@ -3,6 +3,7 @@ import 'LoginSignUp.dart';
 //import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
 class SpalshScreen extends StatelessWidget {
   const SpalshScreen({super.key});
   @override
@@ -63,7 +64,7 @@ class SpalshScreen extends StatelessWidget {
                                             color: Colors.white,
                                             fontSize: 32,
                                             fontWeight: FontWeight.w900,
-                                            letterSpacing: -1.3,
+                                            //letterSpacing: -1.3,
                                           ),
                                         ),
                                       ),

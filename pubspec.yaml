@@ -30,13 +30,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+   
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   google_fonts: ^6.2.1
+  flutter_launcher_icons: ^0.13.1
 dev_dependencies:
+#  flutter_launcher_icons: "^0.13.1"
   flutter_test:
     sdk: flutter
 
@@ -59,8 +61,51 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+  - assets\app_icon.png
+  - assets\athletic-woman-practicing-pushups-while-working-out-living-room 1.png
+  - assets\young-man-making-sport-exercises-home 1.png
+  - assets\woman-helping-man-gym (1) 7.png
+  - assets\woman-helping-man-gym (1) 6.png
+  - assets\woman-helping-man-gym (1) 6 (1).png
+  - assets\woman-helping-man-gym (1) 4.png
+  - assets\woman-helping-man-gym (1) 2.png
+  - assets\Virus.png
+  - assets\Vector.png
+  - assets\Vector (8).png
+  - assets\Vector (7).png
+  - assets\Vector (6).png
+  - assets\Vector (4).png
+  - assets\Vector (3).png
+  - assets\Vector (2).png
+  - assets\Vector (1).png
+  - assets\u_user.png
+  - assets\Seach.png
+  - assets\rightclick.png
+  - assets\Rectangle 879.png
+  - assets\Overlay.png
+  - assets\Mask group (1).png
+  - assets\Home.png
+  - assets\Group 49.png
+  - assets\Group 48.png
+  - assets\Group (6).png
+  - assets\Group (5).png
+  - assets\Group (4).png
+  - assets\Group (3).png
+  - assets\Group (2).png
+  - assets\google.png
+  - assets\fi_mic.png
+  - assets\facebook.png
+  - assets\drop.png
+  - assets\Home.png
+  - assets\chevron-right.png
+  - assets\calender.png
+  - assets\Bot-Progress tracking.png
+  - assets\Bot-Community.png
+  - assets\athletic-woman-practicing-pushups-while-working-out-living-room 1.png
+  - assets/u_user.png
+   
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -76,9 +121,11 @@ flutter:
   # example:
   # fonts:
   #   - family: Schyler
+
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  #
+  # - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
@@ -87,4 +134,23 @@ flutter:
   #         weight: 700
   #
   # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+  # see https://flutter.dev/custom-fonts/#from-package
+  
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets\app_icon.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets\app_icon.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets\app_icon.png"

@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'dart:math';
 
 import 'package:scrubtofit/screens/Home01.dart';
-import 'package:scrubtofit/screens/Name.dart';
 
 class Twofactorauth02 extends StatelessWidget {
   const Twofactorauth02({super.key});
