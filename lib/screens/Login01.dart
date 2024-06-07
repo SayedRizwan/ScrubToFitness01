@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:scrubtofit/screens/TwoFactorAuth01.dart';
-f
+
 class Login01 extends StatelessWidget {
   const Login01({super.key});
   @override
@@ -147,12 +147,11 @@ class Login01 extends StatelessWidget {
                             border: OutlineInputBorder(),
                             hintText: 'Email Address',
 
-                            // fontSize: 16,
-                            // fontWeight: FontWeight.w300,),
+                            //  fontSize: 16,
+                            // fontWeight: FontWeight.w300,
                           ),
                         ),
-                     
-                     
+                      ),
                       Positioned(
                         left: 20,
                         top: 450,
