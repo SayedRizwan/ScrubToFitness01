@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+//import 'package:scrubtofit/backend/GoogleAuthentication.dart';
+import 'package:scrubtofit/screens/GoogleAuthenticationService.dart';
 import 'package:scrubtofit/screens/TwoFactorAuth01.dart';
+//import 'package:scrubtofit/screens/.dart';
+//.dart';
+//import 'GoogleAuthentication.dart';
 
 class Login01 extends StatelessWidget {
   const Login01({super.key});
@@ -118,40 +123,49 @@ class Login01 extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 315,
                         top: 399,
-                        child: Image.asset(
-                          'assets/app_icon.png',
-                          width: 15,
-                          height: 11,
-                          fit: BoxFit.cover,
-                        ),
+                        //   child: Image.asset(
+                        //     'assets/app_icon.png',
+                        //     width: 15,
+                        //     height: 11,
+                        //     fit: BoxFit.cover,
+                        //   ),
                         // child: const ResizeImage(
                         //   AssetImage('app_icon.png'),
                         //   width: 150,
                         //   height: 150,
                         // ),
-                        // child: Image.network(
-                        //   'https://storage.googleapis 2com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2Fb4b64e62b1498cd5c3f017b608a6bc8a.png',
-                        //   width: 15,
-                        //   height: 11,
-                        //   fit: BoxFit.contain,
-                        // ),
-                      ),
-                      Positioned(
-                        left: 44,
-                        top: 395,
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            hintText: 'Email Address',
+                        child: SizedBox(
+                            width: 15,
+                            height: 11,
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: 'Email Address'),
+                            )
+                            //
+                            // Image.network(
+                            //   'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2Fb4b64e62b1498cd5c3f017b608a6bc8a.png',
 
-                            //  fontSize: 16,
-                            // fontWeight: FontWeight.w300,
-                          ),
-                        ),
+                            //   fit: BoxFit.contain,
+                            // ),
+                            ),
                       ),
+                      // Positioned(
+                      //   left: 44,
+                      //   top: 395,
+                      //   child: TextField(
+                      //     decoration: InputDecoration(
+                      //       border: OutlineInputBorder(),
+                      //       hintText: 'Email Address',
+
+                      //       //  fontSize: 16,
+                      //       // fontWeight: FontWeight.w300,
+                      //     ),
+                      //   ),
+                      // ),
                       Positioned(
                         left: 20,
                         top: 450,
@@ -282,6 +296,14 @@ class Login01 extends StatelessWidget {
                           fit: BoxFit.contain,
                         ),
                       ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+                        },
+                      ),
                       Positioned(
                         left: 20,
                         top: 287,
@@ -306,8 +328,8 @@ class Login01 extends StatelessWidget {
                       Positioned(
                         left: 60,
                         top: 305,
-                        child: Image.network(
-                          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F7679ad8d485145ea1eb1a7f13c2b262e.png',
+                        child: Image.asset(
+                          'assets\google.png',
                           width: 18,
                           height: 18,
                           fit: BoxFit.contain,
@@ -325,6 +347,14 @@ class Login01 extends StatelessWidget {
                             fontWeight: FontWeight.w300,
                           ),
                         ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+                        },
                       ),
                       Positioned(
                         left: 195,
@@ -396,4 +426,8 @@ class Login01 extends StatelessWidget {
       ),
     );
   }
+}
+
+class GoogleAuthenticatoin {
+  const GoogleAuthenticatoin();
 }

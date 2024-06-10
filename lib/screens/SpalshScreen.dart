@@ -3,7 +3,6 @@ import 'LoginSignUp.dart';
 //import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class SpalshScreen extends StatelessWidget {
   const SpalshScreen({super.key});
   @override
@@ -18,8 +17,8 @@ class SpalshScreen extends StatelessWidget {
             children: [
               Expanded(
                 child: SizedBox(
-                  width: double.infinity,
-                  height: double.infinity,
+                  width: double.maxFinite,
+                  height: double.maxFinite,
                   child: SingleChildScrollView(
                       child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

@@ -98,7 +98,7 @@ class SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 4), () {
+    Future.delayed(const Duration(seconds: 14), () {
       Navigator.push(
           context,
           MaterialPageRoute(
@@ -111,105 +111,183 @@ class SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          constraints: const BoxConstraints.expand(),
-          color: const Color(0xFFFFFFFF),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: SizedBox(
-                  width: double.infinity,
-                  height: double.infinity,
-                  child: SingleChildScrollView(
-                      child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      IntrinsicHeight(
-                        child: Container(
-                          width: 360,
-                          height: 800,
-                          clipBehavior: Clip.hardEdge,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          child: Stack(
-                            clipBehavior: Clip.none,
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(30),
-                                  gradient: const LinearGradient(
-                                    colors: [
-                                      Color(0xFFF52B2B),
-                                      Color(0xFFAB1008)
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Material(
-                                type: MaterialType.transparency,
-                                child: InkWell(
-                                  overlayColor: WidgetStateProperty.all(
-                                      const Color(0x0c7f7f7f)),
-                                  borderRadius: BorderRadius.circular(30),
-                                  child: Stack(
-                                    children: [
-                                      Positioned(
-                                        left: 140,
-                                        top: 441,
-                                        child: Text(
-                                          'Health',
-                                          style: GoogleFonts.getFont(
-                                            'Inter',
-                                            color: Colors.white,
-                                            fontSize: 32,
-                                            fontWeight: FontWeight.w900,
-                                            //letterSpacing: -1.3,
-                                          ),
-                                        ),
-                                      ),
-                                      // GestureDetector(
-                                      //   onTap: () {
-                                      //     Navigator.push(
-                                      //       context,
-                                      //       MaterialPageRoute(
-                                      //           builder: (context) =>
-                                      //               const LoginSignUp()),
-                                      //     );
-                                      //   },
-                                      // ),
-                                      Positioned(
-                                        left: 83,
-                                        top: 216,
-                                        child: ClipRRect(
-                                          borderRadius: const BorderRadius.all(
-                                              Radius.elliptical(102, 106)),
-                                          clipBehavior: Clip.hardEdge,
-                                          child: Image.asset(
-                                            'assets/app_icon.png',
-                                            width: 203,
-                                            height: 212,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  )),
-                ),
+          child: Container(
+        color: Colors.red,
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Positioned(
+            // left: 128,
+            // top: 450,
+            //child:
+            Text(
+              '',
+              style: GoogleFonts.getFont(
+                'Inter',
+                color: Colors.red,
+                fontSize: 32,
+                fontWeight: FontWeight.w900,
+                letterSpacing: -1.3,
               ),
-            ],
-          ),
+            ),
+            //),
+            // Positioned(
+            // left: 78,
+            // top: 220,
+            //child:
+            ClipRRect(
+              borderRadius: const BorderRadius.all(Radius.elliptical(102, 106)),
+              clipBehavior: Clip.hardEdge,
+              child: Image.network(
+                'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RT1WpwWiZA8xzdz6OQl%2F99cde7a0c324894562d1a66ca3416d0ca37288e1Ellipse%20164.png?alt=media&token=398b9340-6433-4f18-ae20-1fa91af1187f',
+                width: 203,
+                height: 212,
+                fit: BoxFit.cover,
+              ),
+            ),
+          ],
         ),
-      ),
+        //   child: Container(
+        //       width: 203,
+        //       height: 212,
+        //       child: Column(
+        //     mainAxisAlignment: MainAxisAlignment.center,
+        //     children: [
+        //       Expanded(
+        //         child: SingleChildScrollView(
+        //           child: Column(
+        //             crossAxisAlignment: CrossAxisAlignment.start,
+        //             children: [
+        //               IntrinsicHeight(
+        //                 child: Container(
+        //                   width: 203,
+        //                   height: 212,
+        //                   clipBehavior: Clip.hardEdge,
+        //                   decoration: BoxDecoration(
+        //                     borderRadius: BorderRadius.circular(30),
+        //                   ),
+        //                   child: Stack(
+        //                     children: [
+        //                       Positioned(
+        //                         left: 140,
+        //                         top: 441,
+        //                         child: Text(
+        //                           'Health',
+        //                           style: TextStyle(
+        //                             color: Colors.white,
+        //                             fontSize: 32,
+        //                             fontWeight: FontWeight.w900,
+        //                             //letterSpacing: -1.3,
+        //                           ),
+        //                         ),
+        //                       ),
+        //                       // GestureDetector(
+        //                       //   onTap: () {
+        //                       //     Navigator.push(
+        //                       //       context,
+        //                       //       MaterialPageRoute(
+        //                       //           builder: (context) =>
+        //                       //               const LoginSignUp()),
+        //                       //     );
+        //                       //   },
+        //                       // ),
+        //                       Positioned(
+        //                         left: 83,
+        //                         top: 216,
+        //                         child: ClipRRect(
+        //                           borderRadius: const BorderRadius.all(
+        //                               Radius.elliptical(102, 106)),
+        //                           clipBehavior: Clip.hardEdge,
+        //                           child: Image.asset(
+        //                             'assets/app_icon.png',
+        //                             width: 203,
+        //                             height: 212,
+        //                             fit: BoxFit.cover,
+        //                           ),
+        //                         ),
+        //                       )
+        //                     ],
+        //                   ),
+        //                 ),
+        //               )
+        //             ],
+        //           ),
+        //           // Stack(
+        //           //   clipBehavior: Clip.none,
+        //           //   children: [
+        //           //     Container(
+        //           //       decoration: BoxDecoration(
+        //           //         borderRadius: BorderRadius.circular(30),
+        //           //         gradient: const LinearGradient(
+        //           //           colors: [
+        //           //             Color(0xFFF52B2B),
+        //           //             Color(0xFFAB1008)
+        //           //           ],
+        //           //         ),
+        //           //       ),
+        //           //     ),
+        //           // Material(
+        //           //   type: MaterialType.transparency,
+        //           //   child: InkWell(
+        //           //     overlayColor: WidgetStateProperty.all(
+        //           //         const Color(0x0c7f7f7f)),
+        //           //     borderRadius: BorderRadius.circular(30),
+        //           //         child: Stack(
+        //           //           children: [
+        //           //             Positioned(
+        //           //               left: 140,
+        //           //               top: 441,
+        //           //               child: Text(
+        //           //                 'Health',
+        //           //                 style: TextStyle(
+        //           //                   color: Colors.white,
+        //           //                   fontSize: 32,
+        //           //                   fontWeight: FontWeight.w900,
+        //           //                   //letterSpacing: -1.3,
+        //           //                 ),
+        //           //               ),
+        //           //             ),
+        //           //             // GestureDetector(
+        //           //             //   onTap: () {
+        //           //             //     Navigator.push(
+        //           //             //       context,
+        //           //             //       MaterialPageRoute(
+        //           //             //           builder: (context) =>
+        //           //             //               const LoginSignUp()),
+        //           //             //     );
+        //           //             //   },
+        //           //             // ),
+        //           //             Positioned(
+        //           //               left: 83,
+        //           //               top: 216,
+        //           //               child: ClipRRect(
+        //           //                 borderRadius: const BorderRadius.all(
+        //           //                     Radius.elliptical(102, 106)),
+        //           //                 clipBehavior: Clip.hardEdge,
+        //           //                 child: Image.asset(
+        //           //                   'assets/app_icon.png',
+        //           //                   width: 203,
+        //           //                   height: 212,
+        //           //                   fit: BoxFit.cover,
+        //           //                 ),
+        //           //               ),
+        //           //             )
+        //           //           ],
+        //           //         ),
+        //           //       ),
+        //           //     )
+        //           //   ],
+        //           // ),
+        //         ),
+        //       ),
+        //     ],
+        //   )),
+        // ),
+        //       ],
+      )),
+      // ),
     );
   }
 }

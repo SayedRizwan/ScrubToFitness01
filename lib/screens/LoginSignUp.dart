@@ -17,8 +17,8 @@ class LoginSignUp extends StatelessWidget {
             children: [
               Expanded(
                 child: SizedBox(
-                  width: double.infinity,
-                  height: double.infinity,
+                  width: double.maxFinite,
+                  height: double.maxFinite,
                   child: SingleChildScrollView(
                       child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,7 +61,6 @@ class LoginSignUp extends StatelessWidget {
                                       ),
                                       Positioned(
                                         left: 72,
-                                        top: 13,
                                         child: Text(
                                           'Log In',
                                           textAlign: TextAlign.center,
