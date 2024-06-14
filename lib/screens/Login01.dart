@@ -6,6 +6,7 @@ import 'package:scrubtofit/screens/TwoFactorAuth01.dart';
 //import 'package:scrubtofit/screens/.dart';
 //.dart';
 //import 'GoogleAuthentication.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class Login01 extends StatelessWidget {
   const Login01({super.key});
@@ -126,17 +127,6 @@ class Login01 extends StatelessWidget {
                       const Positioned(
                         left: 315,
                         top: 399,
-                        //   child: Image.asset(
-                        //     'assets/app_icon.png',
-                        //     width: 15,
-                        //     height: 11,
-                        //     fit: BoxFit.cover,
-                        //   ),
-                        // child: const ResizeImage(
-                        //   AssetImage('app_icon.png'),
-                        //   width: 150,
-                        //   height: 150,
-                        // ),
                         child: SizedBox(
                             width: 15,
                             height: 11,
@@ -144,28 +134,9 @@ class Login01 extends StatelessWidget {
                               decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   hintText: 'Email Address'),
-                            )
-                            //
-                            // Image.network(
-                            //   'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2Fb4b64e62b1498cd5c3f017b608a6bc8a.png',
-
-                            //   fit: BoxFit.contain,
-                            // ),
-                            ),
+                                  
+                            )),
                       ),
-                      // Positioned(
-                      //   left: 44,
-                      //   top: 395,
-                      //   child: TextField(
-                      //     decoration: InputDecoration(
-                      //       border: OutlineInputBorder(),
-                      //       hintText: 'Email Address',
-
-                      //       //  fontSize: 16,
-                      //       // fontWeight: FontWeight.w300,
-                      //     ),
-                      //   ),
-                      // ),
                       Positioned(
                         left: 20,
                         top: 450,
@@ -289,8 +260,8 @@ class Login01 extends StatelessWidget {
                       Positioned(
                         left: 314,
                         top: 470,
-                        child: Image.network(
-                          'https://storage.googlseapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2Fa3977834b5e0178be09fee2e6b50a350.png',
+                        child: Image.asset(
+                          'assets/facebook.png',
                           width: 16,
                           height: 14,
                           fit: BoxFit.contain,
@@ -329,7 +300,7 @@ class Login01 extends StatelessWidget {
                         left: 60,
                         top: 305,
                         child: Image.asset(
-                          'assets\google.png',
+                          'assets\\google.png',
                           width: 18,
                           height: 18,
                           fit: BoxFit.contain,
@@ -350,10 +321,45 @@ class Login01 extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => HomePage()),
-                          );
+                        
+                       return(  Container(
+        child: _isLoggedIn
+            ? Column(
+                children: [
+                  Image.network((_userObj.photoUrl)!),
+                  Text((_userObj.displayName)!),
+                  Text(_userObj.email),
+                  TextButton(
+                      onPressed: () {
+                        _googleSignIn.signOut().then((value) {
+                          setState(() {
+                            _isLoggedIn = false;
+                          });
+                        }).catchError((e) {});
+                      },
+                      child: Text("Logout"))
+                ],
+              )
+            : Center(
+                child: ElevatedButton(
+                  child: Text("Login with Google"),
+                  onPressed: () {
+                    _googleSignIn.signIn().then((userData) {
+                      setState(() {
+                        _isLoggedIn = true;
+                        _userObj = userData!;
+                      });
+                    }).catchError((e) {
+                      print(e);
+                    });
+                  },
+                ),
+              ),
+      ),
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(builder: (context) => HomePage()),
+                        //  );
                         },
                       ),
                       Positioned(
@@ -381,7 +387,7 @@ class Login01 extends StatelessWidget {
                         left: 224,
                         top: 305,
                         child: Image.network(
-                          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F9e0df26bf6eb4b771bbd508b665f30be.png',
+                          'assets\\google.png',
                           width: 18,
                           height: 18,
                           fit: BoxFit.contain,

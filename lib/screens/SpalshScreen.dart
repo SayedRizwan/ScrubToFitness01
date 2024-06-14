@@ -85,7 +85,7 @@ class SpalshScreen extends StatelessWidget {
                                               Radius.elliptical(102, 106)),
                                           clipBehavior: Clip.hardEdge,
                                           child: Image.network(
-                                            'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RT1WpwWiZA8xzdz6OQl%2F99cde7a0c324894562d1a66ca3416d0ca37288e1Ellipse%20165.png?alt=media&token=df33f1c1-8432-47b1-827c-71067a4c113e',
+                                            'assets/app_ion.png',
                                             width: 203,
                                             height: 212,
                                             fit: BoxFit.cover,

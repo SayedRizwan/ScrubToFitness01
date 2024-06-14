@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Codesundar")),
+      //appBar: AppBar(title: Text("Codesundar")),
       body: Container(
         child: _isLoggedIn
             ? Column(

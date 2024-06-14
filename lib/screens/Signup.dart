@@ -177,7 +177,7 @@ class Signup extends StatelessWidget {
                                 left: 314,
                                 top: 560,
                                 child: Image.network(
-                                  'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2Ffa5001e0a2d3b3dffa3376bd2be02a63.png',
+                                  '',
                                   width: 16,
                                   height: 14,
                                   fit: BoxFit.contain,

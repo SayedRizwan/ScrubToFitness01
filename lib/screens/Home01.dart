@@ -156,8 +156,8 @@ class Home01 extends StatelessWidget {
                                   top: 0,
                                   child: Transform.rotate(
                                     angle: 180 * pi / 180,
-                                    child: Image.network(
-                                      'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F4755095754d15518e62230dba3fcee57.png',
+                                    child: Image.asset(
+                                      'virus.png',
                                       width: 6,
                                       height: 11,
                                       fit: BoxFit.contain,

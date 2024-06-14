@@ -141,7 +141,7 @@ class SplashScreenState extends State<SplashScreen> {
               borderRadius: const BorderRadius.all(Radius.elliptical(102, 106)),
               clipBehavior: Clip.hardEdge,
               child: Image.network(
-                'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RT1WpwWiZA8xzdz6OQl%2F99cde7a0c324894562d1a66ca3416d0ca37288e1Ellipse%20164.png?alt=media&token=398b9340-6433-4f18-ae20-1fa91af1187f',
+                'assets/app_icon.png',
                 width: 203,
                 height: 212,
                 fit: BoxFit.cover,
