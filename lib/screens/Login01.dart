@@ -134,7 +134,6 @@ class Login01 extends StatelessWidget {
                               decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   hintText: 'Email Address'),
-                                  
                             )),
                       ),
                       Positioned(
@@ -321,45 +320,14 @@ class Login01 extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                        
-                       return(  Container(
-        child: _isLoggedIn
-            ? Column(
-                children: [
-                  Image.network((_userObj.photoUrl)!),
-                  Text((_userObj.displayName)!),
-                  Text(_userObj.email),
-                  TextButton(
-                      onPressed: () {
-                        _googleSignIn.signOut().then((value) {
-                          setState(() {
-                            _isLoggedIn = false;
-                          });
-                        }).catchError((e) {});
-                      },
-                      child: Text("Logout"))
-                ],
-              )
-            : Center(
-                child: ElevatedButton(
-                  child: Text("Login with Google"),
-                  onPressed: () {
-                    _googleSignIn.signIn().then((userData) {
-                      setState(() {
-                        _isLoggedIn = true;
-                        _userObj = userData!;
-                      });
-                    }).catchError((e) {
-                      print(e);
-                    });
-                  },
-                ),
-              ),
-      ),
+                           () async {
+  await _googleSignIn.signOut();
+  await _googleSignIn.signIn();
+},
                           // Navigator.push(
                           //   context,
                           //   MaterialPageRoute(builder: (context) => HomePage()),
-                        //  );
+                          //  );
                         },
                       ),
                       Positioned(

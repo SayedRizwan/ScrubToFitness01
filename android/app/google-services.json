@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "32977242957",
+    "project_id": "scrubtofitness",
+    "storage_bucket": "scrubtofitness.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32977242957:android:01de9d4a6e488c548c0504",
+        "android_client_info": {
+          "package_name": "com.example.scrubtofit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyDN3PdIrB7EjnnaYQNmczoga8Wca98jk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
