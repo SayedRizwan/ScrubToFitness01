@@ -20,6 +20,20 @@
      return null;
    },
  ),
+
+
+
+ //Text Button 
+ TextButton(
+              child: Text(
+                _buttonText,
+                style: TextStyle(fontSize: 25),
+              ),
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                  foregroundColor: Colors.red,
+                  elevation: 2,
+                  backgroundColor: Colors.amber),
  * 
  * 
  */

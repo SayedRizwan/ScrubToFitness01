@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 //import 'package:scrubtofit/backend/GoogleAuthentication.dart';
 import 'package:scrubtofit/screens/GoogleAuthenticationService.dart';
 import 'package:scrubtofit/screens/TwoFactorAuth01.dart';
-//import 'package:scrubtofit/screens/.dart';
+//aimport 'package:scrubtofit/screens/.dart';
 //.dart';
 //import 'GoogleAuthentication.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+//import 'package:google_sign_in/google_sign_in.dart';
+import 'package:scrubtofit/backend/firebase_auth_methods.dart';
 
 class Login01 extends StatelessWidget {
   const Login01({super.key});
@@ -99,15 +101,15 @@ class Login01 extends StatelessWidget {
                           ),
                         ),
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const Twofactorauth01()),
-                          );
-                        },
-                      ),
+                      // GestureDetector(
+                      //   onTap: () {
+                      //     Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(
+                      //           builder: (context) => const Twofactorauth01()),
+                      //     );
+                      //   },
+                      // ),
                       Positioned(
                         left: 20,
                         top: 378,
@@ -266,14 +268,14 @@ class Login01 extends StatelessWidget {
                           fit: BoxFit.contain,
                         ),
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => HomePage()),
-                          );
-                        },
-                      ),
+                      // GestureDetector(
+                      //   onTap: () {
+                      //     Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(builder: (context) => HomePage()),
+                      //     );
+                      //   },
+                      // ),
                       Positioned(
                         left: 20,
                         top: 287,
@@ -308,28 +310,41 @@ class Login01 extends StatelessWidget {
                       Positioned(
                         left: 90,
                         top: 303,
-                        child: Text(
-                          'Google',
-                          style: GoogleFonts.getFont(
-                            'Rubik',
-                            color: const Color(0xFF677294),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w300,
-                          ),
-                        ),
+                        child:TextButton(
+              child: Text(
+                "Google",
+                style: TextStyle(fontSize: 25),
+              ),
+              onPressed: () {
+               context.read<FirebaseAuthMethods>().signInWithGoogle(context);
+
+              },
+              // style: TextButton.styleFrom(
+              //     foregroundColor: Colors.red,
+              //     elevation: 2,
+              //     backgroundColor: Colors.amber),
+                        // child: Text(
+                        //   'Google',
+                        //   style: GoogleFonts.getFont(
+                        //     'Rubik',
+                        //     color: const Color(0xFF677294),
+                        //     fontSize: 16,
+                        //     fontWeight: FontWeight.w300,
+                        //   ),
+                         ),
                       ),
-                      GestureDetector(
-                        onTap: () {
-                           () async {
-  await _googleSignIn.signOut();
-  await _googleSignIn.signIn();
-},
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(builder: (context) => HomePage()),
-                          //  );
-                        },
-                      ),
+//                       GestureDetector(
+//                         onTap: () {
+//                            () async {
+//   // await _googleSignIn.signOut();
+//   // await _googleSignIn.signIn();
+// };
+//                           // Navigator.push(
+//                           //   context,
+//                           //   MaterialPageRoute(builder: (context) => HomePage()),
+//                           //  );
+//                         },
+//                       ),
                       Positioned(
                         left: 195,
                         top: 287,
@@ -364,15 +379,15 @@ class Login01 extends StatelessWidget {
                       Positioned(
                         left: 258,
                         top: 303,
-                        child: Text(
-                          'Facebook',
-                          style: GoogleFonts.getFont(
-                            'Rubik',
-                            color: const Color(0xFF677294),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w300,
-                          ),
-                        ),
+                        child:TextButton(
+              child: Text(
+                "Facebook",
+                style: TextStyle(fontSize: 25),
+              ),
+              onPressed: () {
+               context.read<FirebaseAuthMethods>().signInWithGoogle(context);
+
+              },)
                       ),
                       Positioned(
                         left: 104,
