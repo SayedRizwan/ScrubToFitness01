@@ -12,22 +12,22 @@ import 'package:scrubtofit/loginScrrens/screens/phone_screen.dart';
 import 'package:scrubtofit/loginScrrens/screens/signup_email_password_screen.dart';
 import 'package:scrubtofit/services/firebase_auth_methods.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  if (kIsWeb) {
-    FacebookAuth.i.webAndDesktopInitialize(
-      appId: "786633203450716", // Replace with your app id
-      //App Secret Code : 5e42bf04902de0084aac52e810cce76f
-      cookie: true,
-      xfbml: true,
-      version: "v12.0",
-    );
-  }
-  runApp(const SignInUpOptions());
-}
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp(
+//     options: DefaultFirebaseOptions.currentPlatform,
+//   );
+//   if (kIsWeb) {
+//     FacebookAuth.i.webAndDesktopInitialize(
+//       appId: "786633203450716", // Replace with your app id
+//       //App Secret Code : 5e42bf04902de0084aac52e810cce76f
+//       cookie: true,
+//       xfbml: true,
+//       version: "v12.0",
+//     );
+//   }
+//   runApp(const SignInUpOptions());
+// }
 
 class SignInUpOptions extends StatelessWidget {
   const SignInUpOptions({super.key});

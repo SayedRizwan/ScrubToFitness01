@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:scrubtofit/screens/Login01.dart';
 import 'package:scrubtofit/screens/Signup.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:scrubtofit/signup_in_options.dart';
 
 class LoginSignUp extends StatelessWidget {
   const LoginSignUp({super.key});
@@ -78,7 +79,7 @@ class LoginSignUp extends StatelessWidget {
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    const Login01()),
+                                                    const SignInUpOptions()),
                                           );
                                         },
                                       ),
