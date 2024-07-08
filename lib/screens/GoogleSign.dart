@@ -9,12 +9,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   bool _isLoggedIn = false;
   late GoogleSignInAccount _userObj;
-  GoogleSignIn _googleSignIn = GoogleSignIn();
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Codesundar")),
+      appBar: AppBar(title: const Text("Codesundar")),
       body: Container(
         child: _isLoggedIn
             ? Column(
@@ -30,12 +30,12 @@ class _HomePageState extends State<HomePage> {
                           });
                         }).catchError((e) {});
                       },
-                      child: Text("Logout"))
+                      child: const Text("Logout"))
                 ],
               )
             : Center(
                 child: ElevatedButton(
-                  child: Text("Login with Google"),
+                  child: const Text("Login with Google"),
                   onPressed: () {
                     _googleSignIn.signIn().then((userData) {
                       setState(() {

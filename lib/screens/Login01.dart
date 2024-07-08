@@ -8,7 +8,6 @@ import 'package:scrubtofit/screens/TwoFactorAuth01.dart';
 //.dart';
 //import 'GoogleAuthentication.dart';
 //import 'package:google_sign_in/google_sign_in.dart';
-import 'package:scrubtofit/backend/firebase_auth_methods.dart';
 
 class Login01 extends StatelessWidget {
   const Login01({super.key});
@@ -310,28 +309,27 @@ class Login01 extends StatelessWidget {
                       Positioned(
                         left: 90,
                         top: 303,
-                        child:TextButton(
-              child: Text(
-                "Google",
-                style: TextStyle(fontSize: 25),
-              ),
-              onPressed: () {
-               context.read<FirebaseAuthMethods>().signInWithGoogle(context);
-
-              },
-              // style: TextButton.styleFrom(
-              //     foregroundColor: Colors.red,
-              //     elevation: 2,
-              //     backgroundColor: Colors.amber),
-                        // child: Text(
-                        //   'Google',
-                        //   style: GoogleFonts.getFont(
-                        //     'Rubik',
-                        //     color: const Color(0xFF677294),
-                        //     fontSize: 16,
-                        //     fontWeight: FontWeight.w300,
-                        //   ),
-                         ),
+                        child: TextButton(
+                          child: Text(
+                            "Google",
+                            style: TextStyle(fontSize: 25),
+                          ),
+                          onPressed: () {
+                            //   context.read<FirebaseAuthMethods>().signInWithGoogle(context);
+                          },
+                          // style: TextButton.styleFrom(
+                          //     foregroundColor: Colors.red,
+                          //     elevation: 2,
+                          //     backgroundColor: Colors.amber),
+                          // child: Text(
+                          //   'Google',
+                          //   style: GoogleFonts.getFont(
+                          //     'Rubik',
+                          //     color: const Color(0xFF677294),
+                          //     fontSize: 16,
+                          //     fontWeight: FontWeight.w300,
+                          //   ),
+                        ),
                       ),
 //                       GestureDetector(
 //                         onTap: () {
@@ -377,18 +375,17 @@ class Login01 extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        left: 258,
-                        top: 303,
-                        child:TextButton(
-              child: Text(
-                "Facebook",
-                style: TextStyle(fontSize: 25),
-              ),
-              onPressed: () {
-               context.read<FirebaseAuthMethods>().signInWithGoogle(context);
-
-              },)
-                      ),
+                          left: 258,
+                          top: 303,
+                          child: TextButton(
+                            child: Text(
+                              "Facebook",
+                              style: TextStyle(fontSize: 25),
+                            ),
+                            onPressed: () {
+                              //  context.read<FirebaseAuthMethods>().signInWithGoogle(context);
+                            },
+                          )),
                       Positioned(
                         left: 104,
                         top: 196,
