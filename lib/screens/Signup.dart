@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'ChooseGender.dart';
+import 'package:provider/provider.dart';
+import 'package:scrubtofit/loginScrrens/screens/login_email_password_screen.dart';
+import 'package:scrubtofit/services/firebase_auth_methods.dart';
 
-class Signup extends StatelessWidget {
+//import 'ChooseGender.dart';
+class Signup extends StatefulWidget {
   const Signup({super.key});
+
+  @override
+  State<Signup> createState() => _SignupState();
+}
+
+class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,6 +65,9 @@ class Signup extends StatelessWidget {
                                           decoration: TextDecoration.underline,
                                         ),
                                       )
+                                      //     // Navigator.pushNamed(context, EmailPasswordSignup.routeName);
+
+                                      //   )
                                     ],
                                   ),
                                 ),
@@ -74,31 +86,25 @@ class Signup extends StatelessWidget {
                                 ),
                               ),
                               Positioned(
-                                left: 155,
-                                top: 695,
-                                child: SizedBox(
-                                  height: 20,
-                                  child: Text(
-                                    'Sign up',
-                                    style: GoogleFonts.getFont(
-                                      'Rubik',
-                                      color: const Color(0xFFCD1F1A),
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const Choosegender()),
-                                  );
-                                },
-                              ),
+                                  left: 155,
+                                  top: 695,
+                                  child: SizedBox(
+                                      height: 20,
+                                      child: InkWell(
+                                          onTap: () {
+                                            Navigator.pushNamed(context,
+                                                EmailPasswordLogin.routeName);
+                                          },
+                                          child: Text(
+                                            'Sign Up',
+                                            textAlign: TextAlign.center,
+                                            style: GoogleFonts.getFont(
+                                              'League Spartan',
+                                              color: const Color(0xFFF90217),
+                                              fontSize: 24,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          )))),
                               Positioned(
                                 left: 20,
                                 top: 396,
@@ -220,26 +226,32 @@ class Signup extends StatelessWidget {
                               Positioned(
                                 left: 60,
                                 top: 326,
-                                child: Image.network(
-                                  'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F7679ad8d485145ea1eb1a7f13c2b262e.png',
+                                child: Image.asset(
+                                  'assets/google.png',
                                   width: 18,
                                   height: 18,
                                   fit: BoxFit.contain,
                                 ),
                               ),
                               Positioned(
-                                left: 90,
-                                top: 324,
-                                child: Text(
-                                  'Google',
-                                  style: GoogleFonts.getFont(
-                                    'Rubik',
-                                    color: const Color(0xFF677294),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                                ),
-                              ),
+                                  left: 90,
+                                  top: 324,
+                                  child: InkWell(
+                                      onTap: () {
+                                        context
+                                            .read<FirebaseAuthMethods>()
+                                            .signInWithGoogle(context);
+                                      },
+                                      child: Text(
+                                        'Google',
+                                        textAlign: TextAlign.center,
+                                        style: GoogleFonts.getFont(
+                                          'League Spartan',
+                                          color: const Color(0xFFF90217),
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ))),
                               Positioned(
                                 left: 195,
                                 top: 308,
@@ -264,26 +276,61 @@ class Signup extends StatelessWidget {
                               Positioned(
                                 left: 224,
                                 top: 326,
-                                child: Image.network(
-                                  'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F9e0df26bf6eb4b771bbd508b665f30be.png',
+                                child: Image.asset(
+                                  'assets/facebook.png',
                                   width: 18,
                                   height: 18,
                                   fit: BoxFit.contain,
                                 ),
                               ),
                               Positioned(
-                                left: 258,
-                                top: 324,
-                                child: Text(
-                                  'Facebook',
-                                  style: GoogleFonts.getFont(
-                                    'Rubik',
-                                    color: const Color(0xFF677294),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w300,
-                                  ),
-                                ),
-                              ),
+                                  left: 258,
+                                  top: 324,
+                                  child: InkWell(
+                                      onTap: () {
+                                        context
+                                            .read<FirebaseAuthMethods>()
+                                            .signInWithGoogle(context);
+                                      },
+                                      child: Text(
+                                        'Facebook',
+                                        textAlign: TextAlign.center,
+                                        style: GoogleFonts.getFont(
+                                          'League Spartan',
+                                          color: const Color(0xFFF90217),
+                                          fontSize: 24,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ))),
+                              // child: InkWell(
+                              //     onTap: () {
+                              //       // Navigator.push(
+                              //       //   context,
+                              //       //   MaterialPageRoute(
+                              //       //       builder: (context) =>
+                              //       //           const Signup()),
+                              //       // context
+                              //       //     .read<FirebaseAuthMethods>()
+                              //       //     .signInWithFacebook(context);
+                              //       // );
+                              //       // Navigator.EmailPasswordLogin.routeName(
+                              //       //     context, );
+                              //       context
+                              //           .read<FirebaseAuthMethods>()
+                              //           .signInWithGoogle(context);
+
+                              //     },
+                              //     child: Text(
+                              //       'Facebook',
+                              //       textAlign: TextAlign.justify,
+                              //       style: GoogleFonts.getFont(
+                              //         'League Spartan',
+                              //         color: const Color(0xFFF90217),
+                              //         fontSize: 14,
+                              //         fontWeight: FontWeight.w300,
+                              //       ),
+                              //     ))),
+
                               Positioned(
                                 left: 20,
                                 top: 608,

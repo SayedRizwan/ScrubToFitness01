@@ -155,11 +155,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:scrubtofit/firebase_options.dart';
+import 'package:scrubtofit/screens/Login01.dart';
 
 import 'dart:async';
 import 'package:scrubtofit/screens/LoginSignUp.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrubtofit/signup_in_options.dart';
+//import 'package:scrubtofit/signup_in_options.dart';
 
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -186,7 +187,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SplashScreen()); // define it once at root level.
+        home: Login01()); // define it once at root level.
   }
 }
 
@@ -245,7 +246,7 @@ class SplashScreenState extends State<SplashScreen> {
             ClipRRect(
               borderRadius: const BorderRadius.all(Radius.elliptical(102, 106)),
               clipBehavior: Clip.hardEdge,
-              child: Image.network(
+              child: Image.asset(
                 'assets/app_icon.png',
                 width: 203,
                 height: 212,
@@ -254,6 +255,7 @@ class SplashScreenState extends State<SplashScreen> {
             ),
           ],
         ),
+
         //   child: Container(
         //       width: 203,
         //       height: 212,

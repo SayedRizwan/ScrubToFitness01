@@ -8,8 +8,8 @@ import 'package:scrubtofit/services/firebase_auth_methods.dart';
 //import 'GoogleAuthentication.dart';
 //import 'package:google_sign_in/google_sign_in.dart';
 
-class Login01 extends StatelessWidget {
-  const Login01({super.key});
+class Login01_test extends StatelessWidget {
+  const Login01_test({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(

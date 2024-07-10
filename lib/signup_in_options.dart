@@ -1,10 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:provider/provider.dart';
-import 'package:scrubtofit/firebase_options.dart';
 import 'package:scrubtofit/loginScrrens/screens/home_screen.dart';
 import 'package:scrubtofit/loginScrrens/screens/login_email_password_screen.dart';
 import 'package:scrubtofit/loginScrrens/screens/login_screen.dart';
@@ -62,7 +58,7 @@ class SignInUpOptions extends StatelessWidget {
 }
 
 class AuthWrapper extends StatelessWidget {
-  const AuthWrapper({Key? key}) : super(key: key);
+  const AuthWrapper({super.key});
 
   @override
   Widget build(BuildContext context) {

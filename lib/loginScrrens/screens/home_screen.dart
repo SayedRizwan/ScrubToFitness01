@@ -4,7 +4,7 @@ import 'package:scrubtofit/services/firebase_auth_methods.dart';
 import 'package:scrubtofit/widgets/custom_button.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +25,8 @@ class HomeScreen extends StatelessWidget {
           // display the button only when the user email is not verified
           // or isnt an anonymous user
           if (!user.emailVerified && !user.isAnonymous)
+            //Email/Password Signup
+
             CustomButton(
               onTap: () {
                 context
@@ -33,12 +35,14 @@ class HomeScreen extends StatelessWidget {
               },
               text: 'Verify Email',
             ),
+          //Email/Password Login
           CustomButton(
             onTap: () {
               context.read<FirebaseAuthMethods>().signOut(context);
             },
             text: 'Sign Out',
           ),
+          //Phone SignUp
           CustomButton(
             onTap: () {
               context.read<FirebaseAuthMethods>().deleteAccount(context);

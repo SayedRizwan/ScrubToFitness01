@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:scrubtofit/loginScrrens/screens/login_screen.dart';
 import 'package:scrubtofit/screens/Login01.dart';
+import 'package:scrubtofit/screens/Login01_test.dart';
 import 'package:scrubtofit/screens/Signup.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrubtofit/signup_in_options.dart';
 
-class LoginSignUp extends StatelessWidget {
+class LoginSignUp extends StatefulWidget {
   const LoginSignUp({super.key});
+
+  @override
+  State<LoginSignUp> createState() => _LoginSignUpState();
+}
+
+class _LoginSignUpState extends State<LoginSignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,51 +68,34 @@ class LoginSignUp extends StatelessWidget {
                                         ),
                                       ),
                                       Positioned(
-                                        left: 72,
-                                        child: Text(
-                                          'Log In',
-                                          textAlign: TextAlign.center,
-                                          style: GoogleFonts.getFont(
-                                            'League Spartan',
-                                            color: const Color(0xFFF90217),
-                                            fontSize: 24,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                                      GestureDetector(
-                                        onTap: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const SignInUpOptions()),
-                                          );
-                                        },
-                                      ),
-                                      // new GestureDetector(
-                                      //   onTap: () {
-                                      //     Navigator.push(
-                                      //       context,
-                                      //       MaterialPageRoute(
-                                      //           builder: (context) =>
-                                      //               new Login01()),
-                                      //     );
-                                      //   },
-                                      // )
+                                          left: 72,
+                                          child: InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        const Login01()),
+                                              );
+                                              // Navigator.pushNamed(
+                                              //     context, "write your route");
+                                            },
+                                            child: Text(
+                                              'Login',
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.getFont(
+                                                  'League Spartan',
+                                                  color:
+                                                      const Color(0xFFF90217),
+                                                  fontSize: 24,
+                                                  fontWeight: FontWeight.w700,
+                                                  height: double.minPositive),
+                                            ),
+                                          )),
                                     ],
                                   ),
                                 ),
                               ),
-                              // GestureDetector(
-                              //   onTap: () {
-                              //     Navigator.push(
-                              //       context,
-                              //       MaterialPageRoute(
-                              //           builder: (context) => Login01()),
-                              //     );
-                              //   },
-                              // ),
                               Positioned(
                                 left: 82,
                                 top: 688,
@@ -129,29 +119,36 @@ class LoginSignUp extends StatelessWidget {
                                           ),
                                         ),
                                       ),
+/**
+ *   onTap: () {
+                Navigator.pushNamed(context, EmailPasswordLogin.routeName);
+              },
+ */
                                       Positioned(
                                         left: 63,
                                         top: 10,
-                                        child: Text(
-                                          'Sign Up',
-                                          textAlign: TextAlign.center,
-                                          style: GoogleFonts.getFont(
-                                            'League Spartan',
-                                            color: const Color(0xFFF90217),
-                                            fontSize: 24,
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                      ),
-                                      GestureDetector(
-                                        onTap: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const Signup()),
-                                          );
-                                        },
+                                        child: InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        const Signup()),
+                                              );
+                                              // Navigator.EmailPasswordLogin.routeName(
+                                              //     context, );
+                                            },
+                                            child: Text(
+                                              'Sign Up',
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.getFont(
+                                                  'League Spartan',
+                                                  color:
+                                                      const Color(0xFFF90217),
+                                                  fontSize: 24,
+                                                  fontWeight: FontWeight.w700,
+                                                  height: double.minPositive),
+                                            )),
                                       ),
                                     ],
                                   ),
@@ -196,8 +193,8 @@ class LoginSignUp extends StatelessWidget {
                                   borderRadius: const BorderRadius.all(
                                       Radius.elliptical(102, 106)),
                                   clipBehavior: Clip.hardEdge,
-                                  child: Image.network(
-                                    'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RT1WpwWiZA8xzdz6OQl%2F99cde7a0c324894562d1a66ca3416d0ca37288e1Ellipse%20164.png?alt=media&token=398b9340-6433-4f18-ae20-1fa91af1187f',
+                                  child: Image.asset(
+                                    'assets/app_icon.png',
                                     width: 203,
                                     height: 212,
                                     fit: BoxFit.cover,
@@ -218,4 +215,9 @@ class LoginSignUp extends StatelessWidget {
       ),
     );
   }
+
+  // {
+  //   // TODO: implement createState
+  //   throw UnimplementedError();
+  // }
 }
