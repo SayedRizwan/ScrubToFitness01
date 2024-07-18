@@ -49,7 +49,7 @@ class Twofactorauth01 extends StatelessWidget {
                           child: SizedBox(
                             width: 302,
                             child: Text(
-                              'We have sent the verification code to your email address',
+                              'We have sent the verification code to your phone number',
                               style: GoogleFonts.getFont(
                                 'Poppins',
                                 color: const Color(0xB7FFFFFF),
@@ -60,38 +60,70 @@ class Twofactorauth01 extends StatelessWidget {
                           ),
                         ),
                         Positioned(
+                          left: 14,
+                          top: 275,
+                          child: Container(
+                            width: 71,
+                            height: 71,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 1.6,
+                                color: const Color(0xFFDDDDDD),
+                              ),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          left: 270,
+                          top: 275,
+                          child: Container(
+                            width: 71,
+                            height: 71,
+                            clipBehavior: Clip.hardEdge,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 1.6,
+                                color: const Color(0xFFDDDDDD),
+                              ),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                        ),
+                        Positioned(
                           left: 22,
                           top: 418,
                           child: Container(
                             width: 331,
-                            height: 75,
+                            height: 85,
                             clipBehavior: Clip.hardEdge,
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(50),
                               boxShadow: const [
-                                BoxShadow(
-                                  color: Color(0x33FF8C4C),
-                                  spreadRadius: 0,
-                                  offset: Offset(0, 9),
-                                  blurRadius: 14,
-                                )
+                                //   BoxShadow(
+                                //     color: Color(0x33FF8C4C),
+                                //     spreadRadius: 0,
+                                // //    offset: Offset(0, 9),
+                                //     blurRadius: 14,
+                                //   )
                               ],
                             ),
                           ),
                         ),
                         Positioned(
                           left: 136,
-                          top: 441,
+                          top: 435,
                           child: SizedBox(
-                            width: 101,
-                            height: 29,
+                            width: 150,
+                            height: 50,
                             child: Text(
                               'Confirm',
                               style: GoogleFonts.getFont(
-                                'Poppins',
+                                'Lato',
                                 color: const Color(0xFFF52B2B),
-                                fontSize: 18,
+                                fontSize: 25,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -152,23 +184,29 @@ class Twofactorauth01 extends StatelessWidget {
                             child: Stack(
                               clipBehavior: Clip.none,
                               children: [
-                                Positioned.fill(
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      border: Border.all(
-                                        width: 1.8,
-                                        color: const Color(0xFFF90217),
-                                      ),
-                                      borderRadius: BorderRadius.circular(20),
-                                    ),
-                                  ),
+                                const Positioned.fill(
+                                  child: SizedBox(
+                                      height: 40,
+                                      width: 40,
+                                      child: TextField(
+                                          cursorColor: Colors.white,
+                                          decoration: InputDecoration(
+                                            labelStyle: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 60,
+                                                fontWeight: FontWeight.w500),
+                                            focusedBorder: InputBorder.none,
+                                            enabledBorder: InputBorder.none,
+                                            errorBorder: InputBorder.none,
+                                            disabledBorder: InputBorder.none,
+                                          ))),
                                 ),
                                 Positioned.fill(
                                   child: Container(
                                     decoration: BoxDecoration(
                                       border: Border.all(
                                         width: 1.8,
-                                        color: const Color(0xFFF90217),
+                                        color: Colors.white,
                                       ),
                                       borderRadius: BorderRadius.circular(20),
                                     ),
@@ -178,61 +216,115 @@ class Twofactorauth01 extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Positioned(
-                          left: 269,
-                          top: 275,
-                          child: Container(
-                            width: 71,
-                            height: 71,
-                            clipBehavior: Clip.hardEdge,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                width: 1.4,
-                                color: const Color(0xFFDDDDDD),
-                              ),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
+                        const Positioned(
+                          left: 295,
+                          top: 290,
+                          child: SizedBox(
+                            height: 30,
+                            width: 30,
+                            child: TextField(
+                                textAlign: TextAlign.center,
+                                cursorColor: Colors.white,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                decoration: InputDecoration(
+                                  hintText: "2",
+                                  focusedBorder: InputBorder.none,
+                                  enabledBorder: InputBorder.none,
+                                  errorBorder: InputBorder.none,
+                                  disabledBorder: InputBorder.none,
+                                )),
                           ),
                         ),
-                        Positioned(
-                          left: 40,
-                          top: 295,
-                          child: Text(
-                            '8',
-                            style: GoogleFonts.getFont(
-                              'Inter',
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                            ),
+                        //     const Positioned(
+                        // left: 40,
+                        // top: 295,
+                        const Positioned(
+                          left: 30,
+                          top: 290,
+                          child: SizedBox(
+                            height: 40,
+                            width: 40,
+                            child: TextField(
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold),
+                                decoration: InputDecoration(
+                                    focusedBorder: InputBorder.none,
+                                    enabledBorder: InputBorder.none,
+                                    errorBorder: InputBorder.none,
+                                    disabledBorder: InputBorder.none,
+                                    hintText: "3")),
                           ),
                         ),
-                        Positioned(
-                          left: 125,
-                          top: 295,
-                          child: Text(
-                            '5',
-                            style: GoogleFonts.getFont(
-                              'Inter',
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                            ),
+                        const Positioned(
+                          left: 115,
+                          top: 290,
+                          child: SizedBox(
+                            height: 40,
+                            width: 40,
+                            child: TextField(
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold),
+                                decoration: InputDecoration(
+                                  hintText: "4",
+                                  focusedBorder: InputBorder.none,
+                                  enabledBorder: InputBorder.none,
+                                  errorBorder: InputBorder.none,
+                                  disabledBorder: InputBorder.none,
+                                )),
                           ),
                         ),
-                        Positioned(
-                          left: 210,
+                        const Positioned(
+                          left: 195,
                           top: 295,
-                          child: Text(
-                            '2',
-                            style: GoogleFonts.getFont(
-                              'Inter',
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
-                            ),
+                          child: SizedBox(
+                            height: 40,
+                            width: 40,
+                            child: TextField(
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold),
+                                decoration: InputDecoration(
+                                  hintText: "4",
+                                  focusedBorder: InputBorder.none,
+                                  enabledBorder: InputBorder.none,
+                                  errorBorder: InputBorder.none,
+                                  disabledBorder: InputBorder.none,
+                                )),
                           ),
-                        )
+                        ),
+                        // const Positioned(
+                        //   left: 295,
+                        //   top: 295,
+                        //   child: SizedBox(
+                        //       height: 50,
+                        //       width: 50,
+                        //       child: TextField(
+                        //           textAlign: TextAlign.center,
+                        //           style: TextStyle(
+                        //             color: Colors.white,
+                        //             fontSize: 50,
+                        //           ),
+                        //           decoration: InputDecoration(
+                        //             hintText: "6",
+                        //             hintStyle: TextStyle(color: Colors.white),
+                        //             focusedBorder: InputBorder.none,
+                        //             enabledBorder: InputBorder.none,
+                        //             errorBorder: InputBorder.none,
+                        //             disabledBorder: InputBorder.none,
+                        //           ))),
+                        // )
                       ],
                     ),
                   ),

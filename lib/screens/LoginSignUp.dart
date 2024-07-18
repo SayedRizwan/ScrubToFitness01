@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:scrubtofit/loginScrrens/screens/login_screen.dart';
 import 'package:scrubtofit/screens/Login01.dart';
-import 'package:scrubtofit/screens/Login01_test.dart';
 import 'package:scrubtofit/screens/Signup.dart';
 import 'package:google_fonts/google_fonts.dart';
 

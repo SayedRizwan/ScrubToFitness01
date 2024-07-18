@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import 'package:google_fonts/google_fonts.dart';
-import 'package:scrubtofit/screens/Home02.dart';
+//import 'package:google_fonts/google_fonts.dart';
+//import 'package:scrubtofit/screens/Home02.dart';
 
 class Home01 extends StatelessWidget {
   const Home01({super.key});
@@ -36,95 +36,65 @@ class Home01 extends StatelessWidget {
                       Positioned(
                         left: -335,
                         top: 213,
-                        child: Text(
-                          'Select Age',
+                        child: RichText(
+                          text: const TextSpan(text: 'Select Age'),
                           textAlign: TextAlign.center,
-                          style: GoogleFonts.getFont(
-                            'Nunito',
-                            color: Colors.black,
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            height: 1.2,
-                          ),
                         ),
                       ),
                       Positioned(
-                        left: 24,
-                        top: 90,
-                        child: Text(
-                          'Hi, Madison',
-                          style: GoogleFonts.getFont(
-                            'Poppins',
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
+                          left: 24,
+                          top: 90,
+                          child: RichText(
+                            text: const TextSpan(text: 'Hi, Madison'),
+                          )),
                       Positioned(
                         left: 25,
                         top: 123,
                         child: SizedBox(
                           width: 211,
-                          child: Text(
-                            "It's time to challenge your limits.",
-                            style: GoogleFonts.getFont(
-                              'League Spartan',
-                              color: Colors.white,
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
+                          child: RichText(
+                              text: const TextSpan(
+                            text:
+                                "It's time to challenge your limits.\n League Spartan",
+                          )
+                              // color: Colors.white,
+                              ),
                         ),
                       ),
+                      // ),
+                      // ),
                       Positioned(
-                        left: 36,
-                        top: 354,
-                        child: Text(
-                          'Squat Exercise',
-                          style: GoogleFonts.getFont(
-                            'Poppins',
-                            color: Colors.white,
-                            fontSize: 12,
-                          ),
-                        ),
-                      ),
+                          left: 36,
+                          top: 354,
+                          child: RichText(
+                            text: const TextSpan(text: 'Squat Exercise'),
+                          )),
+
                       Positioned(
                         left: 28,
                         top: 229,
-                        child: Text(
-                          'Recommendations',
-                          style: GoogleFonts.getFont(
-                            'Poppins',
-                            color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w500,
-                          ),
+                        child: RichText(
+                          text: const TextSpan(text: "Recommendations"),
                         ),
                       ),
                       Positioned(
                         left: 295,
                         top: 232,
-                        child: Text(
-                          'See All',
-                          style: GoogleFonts.getFont(
-                            'Poppins',
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                          ),
+                        child: RichText(
+                          text: const TextSpan(text: "Se All"),
+                          //'See All',
                         ),
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          print("home2 called");
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const Home02()),
-                          );
-                        },
-                      ),
+                      // GestureDetector(
+                      //   onTap: () {
+                      //     print("home2 called");
+                      //     Navigator.push(
+                      //       conRichtext,
+                      //       MaterialPageRoute(
+                      //           builder: (conRichtext) => const Home02()),
+                      //     );
+                      //   },
+                      // ),
                       Positioned(
                         left: 26,
                         top: 259,
@@ -172,9 +142,8 @@ class Home01 extends StatelessWidget {
                       Positioned(
                         left: 260,
                         top: 96,
-                        child: Image.network(
-                          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F4ca10f2d413161f3c9919afbddd8519e.png',
-                          width: 19,
+                        child: Image.asset(
+                          'Search.png',
                           height: 18,
                           fit: BoxFit.contain,
                         ),
@@ -206,7 +175,7 @@ class Home01 extends StatelessWidget {
                                 left: 0,
                                 top: 0,
                                 child: Image.network(
-                                  'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F893a52252cd03ca121c16575e090d666.png',
+                                  'assets/Vector (3).png',
                                   width: 14,
                                   height: 18,
                                   fit: BoxFit.contain,
@@ -229,7 +198,7 @@ class Home01 extends StatelessWidget {
                                 left: 0,
                                 top: 0,
                                 child: Image.network(
-                                  'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2Ff82419f8fa204c56707607f4fa35f834.png',
+                                  'assets/notification.png',
                                   width: 14,
                                   height: 18,
                                   fit: BoxFit.contain,
@@ -242,26 +211,16 @@ class Home01 extends StatelessWidget {
                       Positioned(
                         left: 50,
                         top: 376,
-                        child: Text(
-                          '12 Minutes',
-                          style: GoogleFonts.getFont(
-                            'League Spartan',
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w300,
-                          ),
+                        child: RichText(
+                          text: TextSpan(text: '12 Minutes'),
                         ),
                       ),
                       Positioned(
                         left: 132,
                         top: 377,
-                        child: Text(
-                          '120 Kcal',
-                          style: GoogleFonts.getFont(
-                            'League Spartan',
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w300,
+                        child: RichText(
+                          text: TextSpan(
+                            text: '120 Kcal)',
                           ),
                         ),
                       ),
@@ -301,6 +260,7 @@ class Home01 extends StatelessWidget {
                                 top: 0,
                                 child: Image.network(
                                   'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F366b1c501c1d5e64a0d6e85013326cfe.png',
+                                  //'notification'
                                   width: 9,
                                   height: 9,
                                   fit: BoxFit.contain,
@@ -376,15 +336,9 @@ class Home01 extends StatelessWidget {
                               Positioned(
                                 left: 8,
                                 top: 40,
-                                child: Text(
-                                  'Workout',
-                                  textAlign: TextAlign.center,
-                                  style: GoogleFonts.getFont(
-                                    'League Spartan',
-                                    color: Colors.white,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w300,
-                                    height: 1.7,
+                                child: RichText(
+                                  text: TextSpan(
+                                    text: 'Workout',
                                   ),
                                 ),
                               )
@@ -429,16 +383,8 @@ class Home01 extends StatelessWidget {
                               Positioned(
                                 left: 11,
                                 top: 46,
-                                child: Text(
-                                  'Progress \nTracking',
-                                  textAlign: TextAlign.center,
-                                  style: GoogleFonts.getFont(
-                                    'League Spartan',
-                                    color: const Color(0xFF212020),
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w300,
-                                    height: 1,
-                                  ),
+                                child: RichText(
+                                  text: TextSpan(text: 'Progress \nTracking'),
                                 ),
                               )
                             ],
@@ -482,17 +428,10 @@ class Home01 extends StatelessWidget {
                               Positioned(
                                 left: 11,
                                 top: 46,
-                                child: Text(
-                                  'Nutrition',
-                                  textAlign: TextAlign.center,
-                                  style: GoogleFonts.getFont(
-                                    'League Spartan',
-                                    color: const Color(0xFF212020),
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w300,
-                                    height: 1.7,
-                                  ),
-                                ),
+                                child: RichText(
+                                    text: TextSpan(
+                                  text: 'Nutrition',
+                                )),
                               )
                             ],
                           ),
@@ -535,15 +474,9 @@ class Home01 extends StatelessWidget {
                               Positioned(
                                 left: 5,
                                 top: 42,
-                                child: Text(
-                                  'Community',
-                                  textAlign: TextAlign.center,
-                                  style: GoogleFonts.getFont(
-                                    'League Spartan',
-                                    color: const Color(0xFF212020),
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w300,
-                                    height: 1.7,
+                                child: RichText(
+                                  text: TextSpan(
+                                    text: 'Community',
                                   ),
                                 ),
                               )
@@ -592,16 +525,11 @@ class Home01 extends StatelessWidget {
                       Positioned(
                         left: 52,
                         top: 458,
-                        child: Text(
-                          'Weekly \nChallenge',
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.getFont(
-                            'Poppins',
-                            color: const Color(0xFFF90217),
-                            fontSize: 24,
-                            fontWeight: FontWeight.w500,
-                            height: 1,
+                        child: RichText(
+                          text: const TextSpan(
+                            text: 'Weekly \nChallenge',
                           ),
+                          textAlign: TextAlign.center,
                         ),
                       ),
                       Positioned(
@@ -609,13 +537,9 @@ class Home01 extends StatelessWidget {
                         top: 513,
                         child: SizedBox(
                           width: 127,
-                          child: Text(
-                            'Plank With Hip Twist',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.getFont(
-                              'Poppins',
-                              color: const Color(0xFFF90217),
-                              fontSize: 12,
+                          child: RichText(
+                            text: TextSpan(
+                              text: 'Plank With Hip Twist',
                             ),
                           ),
                         ),
@@ -671,43 +595,29 @@ class Home01 extends StatelessWidget {
                       Positioned(
                         left: 34,
                         top: 578,
-                        child: Text(
-                          'Articles & Tips',
-                          style: GoogleFonts.getFont(
-                            'Poppins',
-                            color: const Color(0xFFE2F163),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
-                          ),
+                        child: RichText(
+                          text: TextSpan(text: 'Articles & Tips'),
                         ),
                       ),
                       Positioned(
                         left: 40,
                         top: 747,
-                        child: Text(
-                          'Supplement Guide...',
-                          style: GoogleFonts.getFont(
-                            'Poppins',
-                            color: Colors.white,
-                            fontSize: 12,
-                          ),
-                        ),
+                        child: RichText(
+                            text: TextSpan(
+                          text: 'Supplement Guide...',
+                        )),
                       ),
                       Positioned(
-                        left: 208,
-                        top: 747,
-                        child: SizedBox(
-                          width: 147,
-                          child: Text(
-                            '15 Quick & Effective Daily Routines...',
-                            style: GoogleFonts.getFont(
-                              'Poppins',
-                              color: Colors.white,
-                              fontSize: 12,
-                            ),
-                          ),
-                        ),
-                      ),
+                          left: 208,
+                          top: 747,
+                          child: SizedBox(
+                            width: 147,
+                            child: RichText(
+                                text: TextSpan(
+                              text: '15 Quick & Effective Daily Routines...',
+                            )),
+                          )),
+
                       Positioned(
                         left: 162,
                         top: 612,
@@ -761,14 +671,10 @@ class Home01 extends StatelessWidget {
                       Positioned(
                         left: 210,
                         top: 354,
-                        child: Text(
-                          'Full Body Stretching',
-                          style: GoogleFonts.getFont(
-                            'Poppins',
-                            color: Colors.white,
-                            fontSize: 12,
-                          ),
-                        ),
+                        child: RichText(
+                            text: const TextSpan(
+                          text: 'Full Body Stretching',
+                        )),
                       ),
                       Positioned(
                         left: 200,
@@ -788,29 +694,16 @@ class Home01 extends StatelessWidget {
                       Positioned(
                         left: 225,
                         top: 376,
-                        child: Text(
-                          '12 Minutes',
-                          style: GoogleFonts.getFont(
-                            'League Spartan',
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w300,
-                          ),
+                        child: RichText(
+                          text: const TextSpan(text: '12 Minutes'),
                         ),
                       ),
                       Positioned(
-                        left: 307,
-                        top: 377,
-                        child: Text(
-                          '120 Kcal',
-                          style: GoogleFonts.getFont(
-                            'League Spartan',
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w300,
-                          ),
-                        ),
-                      ),
+                          left: 307,
+                          top: 377,
+                          child: RichText(
+                            text: const TextSpan(text: '120 Kcal'),
+                          )),
                       Positioned(
                         left: 295,
                         top: 377,

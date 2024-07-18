@@ -3,13 +3,99 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 //import 'package:scrubtofit/backend/GoogleAuthentication.dart';
 import 'package:scrubtofit/services/firebase_auth_methods.dart';
+
 //aimport 'package:scrubtofit/screens/.dart';
 //.dart';
 //import 'GoogleAuthentication.dart';
 //import 'package:google_sign_in/google_sign_in.dart';
+/**
+ * 
+ *  @override
+  void initState() {
+    super.initState();
 
-class Login01 extends StatelessWidget {
+    // Start listening to changes.
+    myController.addListener(_printLatestValue);
+  }
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is removed from the widget tree.
+    // This also removes the _printLatestValue listener.
+    myController.dispose();
+    super.dispose();
+  }
+
+  void _printLatestValue() {
+    final text = myController.text;
+    print('Second text field: $text (${text.characters.length})');
+  }
+
+ * 
+ * 
+ * 
+ * 
+ */
+
+class Login01 extends StatefulWidget {
+  static String routeName = '/login-email-password';
   const Login01({super.key});
+
+  @override
+  _Login01State createState() => _Login01State();
+}
+
+class _Login01State extends State<Login01> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController _myemailController = TextEditingController();
+  final TextEditingController _mypasswordController = TextEditingController();
+  var _currentpass = "";
+  var _currentemail = "";
+
+  get valueemail => _currentemail;
+  get valuepass => _currentpass;
+
+  @override
+  void initState() {
+    super.initState();
+    // Start listening to changes.
+    _myemailController.addListener(_printLatestValue);
+    _mypasswordController.addListener(_printLatestValue);
+    setState(() {
+      _currentemail = _myemailController.text;
+      _currentpass = _mypasswordController.text;
+    });
+  }
+
+  void _printLatestValue() {
+    _currentemail = _myemailController.text;
+    _currentpass = _mypasswordController.text;
+    print(
+        'Second text field: $_myemailController (${_myemailController.text})');
+    print(
+        'Second pass field: $_mypasswordController (${_mypasswordController.text})');
+  }
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is removed from the
+    // widget tree.
+    _myemailController.dispose();
+    _mypasswordController.dispose();
+    super.dispose();
+  }
+
+  //varemailController
+  void loginUser() {
+    context.read<FirebaseAuthMethods>().loginWithEmail(
+          email: emailController.text,
+          password: passwordController.text,
+          context: context,
+        );
+  }
+
+  // const Login01({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,15 +184,16 @@ class Login01 extends StatelessWidget {
                                           ),
                                         ),
                                         Positioned(
-                                            left: 162,
+                                            left: 80,
                                             top: 553,
                                             child: SizedBox(
-                                                width: 52,
-                                                height: 20,
+                                                width: 200,
+                                                height: 30,
                                                 child: TextButton(
                                                   onPressed: () {
                                                     print(
                                                         "login button clicked ");
+                                                    _printLatestValue();
                                                   },
                                                   child: Text(
                                                     'Login',
@@ -138,156 +225,67 @@ class Login01 extends StatelessWidget {
                                           ),
                                         ),
                                         const Positioned(
-                                          left: 315,
-                                          top: 399,
+                                          left: 35,
+                                          top: 379,
+                                          /**
+                                           * 
+                                           * 
+ TextField(
+              onChanged: (text) {
+                print('First text field: $text (${text.characters.length})');
+              },
+            ),
+            TextField(
+              controller: myController,
+            ),
+
+                                           */
                                           child: SizedBox(
-                                              width: 15,
-                                              height: 11,
+                                              width: 300,
+                                              height: 100,
                                               child: TextField(
+                                                //email: emailController.text,
+                                                //    controller: ,
                                                 obscureText: false,
                                                 decoration: InputDecoration(
-                                                    border:
-                                                        OutlineInputBorder(),
+                                                    // border:InputBorder.none(),
+                                                    disabledBorder:
+                                                        InputBorder.none,
                                                     hintText: 'Email Address'),
                                               )),
                                         ),
+                                        Positioned(
+                                          left: 20,
+                                          top: 458,
+                                          child: Container(
+                                            width: 335,
+                                            height: 54,
+                                            clipBehavior: Clip.hardEdge,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                              border: Border.all(
+                                                color: const Color(0x28677294),
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(12),
+                                            ),
+                                          ),
+                                        ),
                                         const Positioned(
-                                            left: 20,
-                                            top: 450,
-                                            child: SizedBox(
-                                                width: 15,
-                                                height: 11,
-                                                child: TextField(
-                                                  obscureText: true,
-                                                  decoration: InputDecoration(
-                                                      border:
-                                                          OutlineInputBorder(),
-                                                      hintText: 'Password'),
-                                                ))
-                                            // child: Container(
-
-                                            ),
-                                        Positioned(
-                                          left: 45,
-                                          top: 473,
-                                          child: Container(
-                                            width: 8,
-                                            height: 8,
-                                            clipBehavior: Clip.hardEdge,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0xFF677294),
-                                              borderRadius:
-                                                  BorderRadius.circular(4),
-                                            ),
-                                          ),
-                                        ),
-                                        Positioned(
-                                          left: 58,
-                                          top: 473,
-                                          child: Container(
-                                            width: 8,
-                                            height: 8,
-                                            clipBehavior: Clip.hardEdge,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0xFF677294),
-                                              borderRadius:
-                                                  BorderRadius.circular(4),
-                                            ),
-                                          ),
-                                        ),
-                                        Positioned(
-                                          left: 71,
-                                          top: 473,
-                                          child: Container(
-                                            width: 8,
-                                            height: 8,
-                                            clipBehavior: Clip.hardEdge,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0xFF677294),
-                                              borderRadius:
-                                                  BorderRadius.circular(4),
-                                            ),
-                                          ),
-                                        ),
-                                        Positioned(
-                                          left: 84,
-                                          top: 473,
-                                          child: Container(
-                                            width: 8,
-                                            height: 8,
-                                            clipBehavior: Clip.hardEdge,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0xFF677294),
-                                              borderRadius:
-                                                  BorderRadius.circular(4),
-                                            ),
-                                          ),
-                                        ),
-                                        Positioned(
-                                          left: 97,
-                                          top: 473,
-                                          child: Container(
-                                            width: 8,
-                                            height: 8,
-                                            clipBehavior: Clip.hardEdge,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0xFF677294),
-                                              borderRadius:
-                                                  BorderRadius.circular(4),
-                                            ),
-                                          ),
-                                        ),
-                                        Positioned(
-                                          left: 110,
-                                          top: 473,
-                                          child: Container(
-                                            width: 8,
-                                            height: 8,
-                                            clipBehavior: Clip.hardEdge,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0xFF677294),
-                                              borderRadius:
-                                                  BorderRadius.circular(4),
-                                            ),
-                                          ),
-                                        ),
-                                        Positioned(
-                                          left: 123,
-                                          top: 473,
-                                          child: Container(
-                                            width: 8,
-                                            height: 8,
-                                            clipBehavior: Clip.hardEdge,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0xFF677294),
-                                              borderRadius:
-                                                  BorderRadius.circular(4),
-                                            ),
-                                          ),
-                                        ),
-                                        Positioned(
-                                          left: 136,
-                                          top: 473,
-                                          child: Container(
-                                            width: 8,
-                                            height: 8,
-                                            clipBehavior: Clip.hardEdge,
-                                            decoration: BoxDecoration(
-                                              color: const Color(0xFF677294),
-                                              borderRadius:
-                                                  BorderRadius.circular(4),
-                                            ),
-                                          ),
-                                        ),
-                                        Positioned(
-                                          left: 314,
-                                          top: 470,
-                                          child: Image.asset(
-                                            'assets/facebook.png',
-                                            width: 16,
-                                            height: 14,
-                                            fit: BoxFit.contain,
-                                          ),
+                                          left: 35,
+                                          top: 459,
+                                          child: SizedBox(
+                                              width: 300,
+                                              height: 100,
+                                              child: TextField(
+                                                //email: emailController.text,
+                                                //    controller: _myemailController.text,
+                                                obscureText: true,
+                                                decoration: InputDecoration(
+                                                    hintText: 'Password'),
+                                                // onChanged: (valuepass){},
+                                                //  controller: emailController.text;
+                                              )),
                                         ),
                                         Positioned(
                                           left: 20,
@@ -312,22 +310,24 @@ class Login01 extends StatelessWidget {
                                           ),
                                         ),
                                         Positioned(
-                                          left: 60,
+                                          left: 35,
                                           top: 305,
                                           child: Image.asset(
                                             'assets\\google.png',
-                                            width: 18,
-                                            height: 18,
+                                            width: 20,
+                                            height: 20,
                                             fit: BoxFit.contain,
                                           ),
                                         ),
                                         Positioned(
-                                          left: 80,
-                                          top: 305,
+                                          left: 50,
+                                          top: 297,
                                           child: TextButton(
                                             child: const Text(
                                               "Google",
-                                              style: TextStyle(fontSize: 25),
+                                              style: TextStyle(
+                                                  fontSize: 25,
+                                                  fontWeight: FontWeight.w300),
                                             ),
                                             onPressed: () {
                                               context
@@ -359,22 +359,25 @@ class Login01 extends StatelessWidget {
                                           ),
                                         ),
                                         Positioned(
-                                          left: 224,
-                                          top: 305,
+                                          left: 220,
+                                          top: 300,
                                           child: Image.asset(
                                             'assets/facebook.png',
-                                            width: 18,
-                                            height: 18,
+                                            width: 25,
+                                            height: 25,
                                             fit: BoxFit.contain,
                                           ),
                                         ),
                                         Positioned(
-                                            left: 258,
-                                            top: 250,
+                                            left: 245,
+                                            top: 297,
                                             child: TextButton(
                                               child: const Text(
                                                 "Facebook",
-                                                style: TextStyle(fontSize: 18),
+                                                style: TextStyle(
+                                                    fontSize: 20,
+                                                    fontWeight:
+                                                        FontWeight.w300),
                                               ),
                                               onPressed: () {
                                                 context

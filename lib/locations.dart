@@ -19,8 +19,8 @@ class LoginPage077 extends StatelessWidget {
               constraints: BoxConstraints(
                 minHeight: viewportConstraints.maxHeight,
               ),
-              child: ListView(
-                padding: const EdgeInsets.all(8),
+              child: Column(
+                //  padding: const EdgeInsets.all(8),
                 children: <Widget>[
                   // IntrinsicHeight(
                   //     child: Container(
@@ -36,7 +36,7 @@ class LoginPage077 extends StatelessWidget {
                   Container(
                     height: 120,
                     alignment: Alignment.center,
-                    child: SizedBox(
+                    child: const SizedBox(
                         width: 15,
                         height: 11,
                         child: TextField(
@@ -50,7 +50,7 @@ class LoginPage077 extends StatelessWidget {
                   Container(
                     height: 120,
                     alignment: Alignment.center,
-                    child: SizedBox(
+                    child: const SizedBox(
                         width: 15,
                         height: 11,
                         child: TextField(

@@ -155,7 +155,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:scrubtofit/firebase_options.dart';
-import 'package:scrubtofit/screens/Login01.dart';
+import 'package:scrubtofit/screens/Home01.dart';
 
 import 'dart:async';
 import 'package:scrubtofit/screens/LoginSignUp.dart';
@@ -187,7 +187,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Login01()); // define it once at root level.
+        home: Home01()); // define it once at root level.
   }
 }
 
@@ -208,7 +208,7 @@ class SplashScreenState extends State<SplashScreen> {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const LoginSignUp(),
+            builder: (context) => const Home01(),
           ));
     });
   }

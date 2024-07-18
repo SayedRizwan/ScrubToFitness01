@@ -38,7 +38,7 @@ class LoginPage07 extends StatelessWidget {
                     child: Container(
                       height: 120,
                       alignment: Alignment.center,
-                      child: SizedBox(
+                      child: const SizedBox(
                           width: 15,
                           height: 11,
                           child: TextField(
@@ -53,7 +53,7 @@ class LoginPage07 extends StatelessWidget {
                     child: Container(
                       height: 120,
                       alignment: Alignment.center,
-                      child: SizedBox(
+                      child: const SizedBox(
                           width: 15,
                           height: 11,
                           child: TextField(
