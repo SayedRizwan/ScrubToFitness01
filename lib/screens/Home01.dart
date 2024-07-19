@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:math';
 
 import 'package:flutter/gestures.dart';
@@ -13,6 +12,7 @@ import 'package:scrubtofit/screens/Profile.dart';
 //import 'package:google_fonts/google_fonts.dart';
 //import 'package:scrubtofit/screens/Home02.dart';
 import 'Service.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Home01 extends StatelessWidget {
   const Home01({super.key});
@@ -136,7 +136,7 @@ class Home01 extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => Service()));
+                                        builder: (context) => const Service()));
 
                                 //  print("See ALl clicked");
                                 // Single tapped.
@@ -637,8 +637,22 @@ class Home01 extends StatelessWidget {
                                     text: TextSpan(
                                   text: 'Nutrition',
                                   recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      print(" Nutrition clicked");
+                                    ..onTap = () async {
+// var document = await Firestore.instance.collection('COLLECTION_NAME').document('TESTID1');
+// document.get() => then(function(document) {
+//     print(document("name"));
+// });
+
+                                      var document = await FirebaseFirestore
+                                          .instance
+                                          .collection('Users')
+                                          .document('xmTo0HIwEUFhVVs98AIB')
+                                          .get()
+                                          .then(
+                                            (DocumentSnapshot) => print(
+                                                DocumentSnapshot.data['key']
+                                                    .toString()),
+                                          );
                                       // Single tapped.
                                     },
                                 )),

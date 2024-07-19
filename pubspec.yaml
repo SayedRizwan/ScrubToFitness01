@@ -47,6 +47,7 @@ dependencies:
   get: ^4.6.6
   youtube_explode_dart: ^2.2.1
   video_player: ^2.9.1
+  cloud_firestore: ^5.1.0
 
   #firebase_auth_demo: any
 dev_dependencies:
