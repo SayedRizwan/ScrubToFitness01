@@ -637,22 +637,34 @@ class Home01 extends StatelessWidget {
                                     text: TextSpan(
                                   text: 'Nutrition',
                                   recognizer: TapGestureRecognizer()
-                                    ..onTap = () async {
+                                    ..onTap = () {
+                                      Stream<QuerySnapshot> usersStream =
+                                          FirebaseFirestore.instance
+                                              .collection('Users')
+                                              .snapshots();
+
+                                      usersStream
+                                          .listen((QuerySnapshot snapshot) {
+                                        snapshot.docs.forEach((doc) {
+                                          print('${doc.id} => ${doc.data()}');
+                                        });
+                                      });
+
 // var document = await Firestore.instance.collection('COLLECTION_NAME').document('TESTID1');
 // document.get() => then(function(document) {
 //     print(document("name"));
 // });
 
-                                      var document = await FirebaseFirestore
-                                          .instance
-                                          .collection('Users')
-                                          .document('xmTo0HIwEUFhVVs98AIB')
-                                          .get()
-                                          .then(
-                                            (DocumentSnapshot) => print(
-                                                DocumentSnapshot.data['key']
-                                                    .toString()),
-                                          );
+                                      // var document = await FirebaseFirestore
+                                      //     .instance
+                                      //     .collection('Users')
+                                      //     .document('xmTo0HIwEUFhVVs98AIB')
+                                      //     .get()
+                                      //     .then(
+                                      //       (DocumentSnapshot) => print(
+                                      //           DocumentSnapshot.data['key']
+                                      //               .toString()),
+                                      //     );
                                       // Single tapped.
                                     },
                                 )),
