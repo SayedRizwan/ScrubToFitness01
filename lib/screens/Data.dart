@@ -2,5 +2,29 @@ String name = "";
 
 int age = 0;
 String email = '';
-var gender = ''; //M F
+bool gender = true; 
+//let true == male
+//false female
 
+//M F
+
+/**
+ * 
+ * age
+0
+(number)
+
+email
+""
+(string)
+
+gender
+true
+(boolean)
+
+name
+""
+ * 
+ * 
+ * 
+ */

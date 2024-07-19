@@ -586,7 +586,8 @@ class Home01 extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const Profile()));
+                                    builder: (context) =>
+                                        const Appointments()));
                           },
                           child: Image.network(
                             'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F63c757bd5b81a84dd8ed4ac46467056d.png',
