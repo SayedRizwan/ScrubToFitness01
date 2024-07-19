@@ -72,6 +72,53 @@
 
 
 
+
+////
+///      Event On Text ==========
+
+
+
+RichText(
+                            text: TextSpan(
+                          text: 'Supplement Guide...',
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              print("Supplement clicked");
+                              // Single tapped.
+                            },
+                        )),
+
+
+            Event On Image.asset/ Image.network
+
+
+
+            InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Profile()));
+                                  },
+                                  child: Image.network(
+                                    'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2Fbcc40c92d2d249ec43e9fc9d4ae75690.png',
+                                    width: 15,
+                                    height: 14,
+                                    fit: BoxFit.contain,
+                                  ),
+
+
+
+Signle Page Route
+
+
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Profile()));
+
  * 
  * 
  */
