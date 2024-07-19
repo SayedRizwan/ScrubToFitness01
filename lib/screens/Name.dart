@@ -1,6 +1,9 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:scrubtofit/screens/ChooseAge.dart';
 import 'package:scrubtofit/screens/Home01.dart';
+import 'package:scrubtofit/screens/Signup.dart';
 
 class Name extends StatelessWidget {
   const Name({super.key});
@@ -47,26 +50,37 @@ class Name extends StatelessWidget {
                         Positioned(
                           left: -335,
                           top: 213,
-                          child: Text(
-                            'Select Age',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.getFont(
-                              'Nunito',
-                              color: Colors.black,
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              height: 1.2,
+                          child: RichText(
+                            text: TextSpan(
+                              text: 'Select Age',
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Chooseage()));
+                                },
+                              // Single tapped.
+
+                              style: GoogleFonts.getFont(
+                                'Nunito',
+                                color: Colors.black,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                height: 1.2,
+                              ),
                             ),
+                            // ),),
+                            // GestureDetector(
+                            //   onTap: () {
+                            //     Navigator.push(
+                            //       context,
+                            //       MaterialPageRoute(
+                            //           builder: (context) => const Home01()),
+                            //     );
+                            //   },
+                            // ),
                           ),
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Home01()),
-                            );
-                          },
                         ),
                         Positioned(
                           left: 113,
@@ -111,45 +125,72 @@ class Name extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          left: 136,
-                          top: 401,
-                          child: Text(
-                            'Justin Nguyen',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.getFont(
-                              'Nunito',
-                              color: const Color(0xFFF90217),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                              height: 1.2,
-                            ),
-                          ),
-                        ),
+                            left: 136,
+                            top: 401,
+                            child: RichText(
+                              text: TextSpan(
+                                text: 'Justin Nguyen',
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    print("Supplement clicked");
+                                    // Single tapped.
+                                  },
+                                style: GoogleFonts.getFont(
+                                  'Nunito',
+                                  color: const Color(0xFFF90217),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                  height: 1.2,
+                                ),
+                              ),
+                            )),
                         Positioned(
                           left: 154,
                           top: 523,
-                          child: Text(
-                            'Sign Up',
-                            style: GoogleFonts.getFont(
-                              'Nunito',
-                              color: const Color(0xFFF90217),
-                              fontSize: 18,
-                              fontWeight: FontWeight.w800,
+                          child: RichText(
+                            text: TextSpan(
+                              text: 'Sign Up',
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  // print("Supplement clicked");
+                                  // Single tapped.
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const Signup()));
+                                },
+                              style: GoogleFonts.getFont(
+                                'Nunito',
+                                color: const Color(0xFFF90217),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w800,
+                              ),
                             ),
                           ),
                         ),
                         Positioned(
                           left: 56,
                           top: 185,
-                          child: Text(
-                            'Whats your name?',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.getFont(
-                              'Nunito',
-                              color: Colors.white,
-                              fontSize: 30,
-                              fontWeight: FontWeight.bold,
-                              height: 1.2,
+                          child: RichText(
+                            text: TextSpan(
+                              text: 'Whats your name?',
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => const Name()));
+
+                                  // Single tapped.
+                                },
+                              style: GoogleFonts.getFont(
+                                'Nunito',
+                                color: Colors.white,
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold,
+                                height: 1.2,
+                              ),
                             ),
                           ),
                         ),

@@ -1,14 +1,18 @@
+import 'dart:developer';
 import 'dart:math';
 
 import 'package:flutter/gestures.dart';
 
 import 'package:flutter/material.dart';
+import 'package:scrubtofit/screens/Appointments.dart';
+import 'package:scrubtofit/screens/ChooseAge.dart';
 import 'package:scrubtofit/screens/HealthTraking.dart';
 import 'package:scrubtofit/screens/Home02.dart';
 import 'package:scrubtofit/screens/Profile.dart';
 //import 'package:flutter/gestures.dart';
 //import 'package:google_fonts/google_fonts.dart';
 //import 'package:scrubtofit/screens/Home02.dart';
+import 'Service.dart';
 
 class Home01 extends StatelessWidget {
   const Home01({super.key});
@@ -50,7 +54,7 @@ class Home01 extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              const Home02()));
+                                              const Chooseage()));
                                 }
                               //                   recognizer: TapGestureRecognizer()..onTap = () {
                               //   // Single tapped.
@@ -64,6 +68,8 @@ class Home01 extends StatelessWidget {
                           top: 90,
                           child: RichText(
                             text: TextSpan(
+                                //Name using shared Reference or directly from firebase
+
                                 text: 'Hi, Madison',
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
@@ -130,7 +136,7 @@ class Home01 extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => const Home02()));
+                                        builder: (context) => Service()));
 
                                 //  print("See ALl clicked");
                                 // Single tapped.
@@ -405,6 +411,7 @@ class Home01 extends StatelessWidget {
                                   MaterialPageRoute(
                                       builder: (context) => const Profile()));
                             },
+                            //thumbnail
                             child: Image.network(
                               'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RT1WpwWiZA8xzdz6OQl%2F0f15fa731d1739a8c0943c6d5bf0b37456fe0db7woman-helping-man-gym%20(1)%202.png?alt=media&token=316e4569-ee6b-4151-b8d5-2d13442ff6f5',
                               width: 157,
@@ -538,7 +545,7 @@ class Home01 extends StatelessWidget {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const Profile()));
+                                                const HealthTraking()));
                                   },
                                   child: Image.network(
                                     'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F8243b26d35e82caaec773820423abbd7.png',
@@ -680,7 +687,7 @@ class Home01 extends StatelessWidget {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const Profile()));
+                                                const Appointments()));
                                   },
                                   child: Image.network(
                                     'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F8f83a3fd89ab9427e7f4129960af0752.png',
@@ -698,7 +705,11 @@ class Home01 extends StatelessWidget {
                                     text: 'Community',
                                     recognizer: TapGestureRecognizer()
                                       ..onTap = () {
-                                        print("Community clicked");
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const Appointments()));
                                         // Single tapped.
                                       },
                                   ),
@@ -801,6 +812,7 @@ class Home01 extends StatelessWidget {
                                       builder: (context) => const Profile()));
                             },
                             child: Image.network(
+                              //Thumbnail
                               'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RT1WpwWiZA8xzdz6OQl%2Ff8e0d0ea0ac4b2faf403767d1539ea7a5d4e77d7woman-helping-man-gym%20(1)%204.png?alt=media&token=7ca7a189-8f39-4cd0-b834-e56fab0b9c60',
                               width: 157,
                               height: 125,
@@ -825,6 +837,7 @@ class Home01 extends StatelessWidget {
                                       builder: (context) => const Profile()));
                             },
                             child: Image.network(
+                              //THumbail
                               'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RT1WpwWiZA8xzdz6OQl%2F649499a33f1816f15356492401512e84ca690d67woman-helping-man-gym%20(1)%205.png?alt=media&token=09ad6169-714d-470f-b71c-b6f3b4afc2c5',
                               width: 157,
                               height: 134,
@@ -849,6 +862,7 @@ class Home01 extends StatelessWidget {
                                       builder: (context) => const Profile()));
                             },
                             child: Image.network(
+                              //thumnail
                               'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RT1WpwWiZA8xzdz6OQl%2Fcf91632df5657d9f27063e80360c3c374973850fwoman-helping-man-gym%20(1)%206.png?alt=media&token=45b1c894-ff03-4878-a130-b1974a6f3542',
                               width: 157,
                               height: 134,
@@ -1056,6 +1070,7 @@ class Home01 extends StatelessWidget {
                                             builder: (context) =>
                                                 const Profile()));
                                   },
+                                  //Clock/ Timer //
                                   child: Image.network(
                                     'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F366b1c501c1d5e64a0d6e85013326cfe.png',
                                     width: 9,
@@ -1082,7 +1097,7 @@ class Home01 extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => const Profile()));
-                            },
+                            }, //Thumnail
                             child: Image.network(
                               'https://firebasestorage.googleapis.com/v0/b/codeless-app.appspot.com/o/projects%2F0RT1WpwWiZA8xzdz6OQl%2Fe6e3f23fb7f71465d7d6665bc1fe3f66b2e95590woman-helping-man-gym%20(1)%207.png?alt=media&token=c5843cf6-ae18-41d7-8080-5c13552d4c68',
                               width: 157,
