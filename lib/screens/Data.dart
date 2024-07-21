@@ -1,5 +1,3 @@
-
-
 String name = "";
 
 int age = 0;
@@ -31,11 +29,11 @@ name
  * 
  */
 
-void printtData()
-{
+// void printtData()
+// {
 
-  Firestore.instance.collection('COLLECTION').document('ID')
-.get().then((DocumentSnapshot) =>
-      print(DocumentSnapshot.data['key'].toString());
-);
-}
+//   Firestore.instance.collection('COLLECTION').document('ID')
+// .get().then((DocumentSnapshot) =>
+//       print(DocumentSnapshot.data['key'].toString());
+// );
+// }

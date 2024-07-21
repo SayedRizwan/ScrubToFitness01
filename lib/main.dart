@@ -7,6 +7,7 @@ import 'package:scrubtofit/screens/Home01.dart';
 
 import 'dart:async';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:scrubtofit/screens/Profile.dart';
 //import 'package:scrubtofit/signup_in_options.dart';
 
 main() async {
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Home01()); // define it once at root level.
+        home: Profile()); // define it once at root level.
   }
 }
 
