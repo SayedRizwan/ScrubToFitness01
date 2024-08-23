@@ -77,7 +77,7 @@ class Home01 extends StatelessWidget {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const Home02()));
+                                                const Home01()));
                                   }),
                           )),
                       Positioned(
@@ -95,7 +95,7 @@ class Home01 extends StatelessWidget {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  const Home02()));
+                                                  const Home01()));
                                     })
                               // color: Colors.white,
                               ),
@@ -260,7 +260,7 @@ class Home01 extends StatelessWidget {
                                                 const Profile()));
                                   },
                                   child: Image.asset(
-                                    'assets/Vector(3).png',
+                                    'assets/Vector(3).png', //Profile
                                     width: 14,
                                     height: 18,
                                     fit: BoxFit.contain,

@@ -7,6 +7,7 @@ import 'package:scrubtofit/screens/Home01.dart';
 
 import 'dart:async';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:scrubtofit/screens/LoginSignUp.dart';
 import 'package:scrubtofit/screens/Profile.dart';
 //import 'package:scrubtofit/signup_in_options.dart';
 
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Profile()); // define it once at root level.
+        home: SplashScreen()); // define it once at root level.
   }
 }
 
@@ -56,7 +57,8 @@ class SplashScreenState extends State<SplashScreen> {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const Home01(),
+            builder: (context) => Home01(),
+            // builder: (context) => LoginSignUp(),
           ));
     });
   }
