@@ -18,6 +18,7 @@ samples, guidance on mobile development, and a full API reference.
 ## Here are some screenshots of running application.
 
 ## Splash Screen.
-    ![alt text](<Screenshot 2024-08-23 160157.png>)
+![alt text](Home01-1.png)
 ## Home Screen.
 ![alt text](Home01.png)
+
