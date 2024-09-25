@@ -645,9 +645,9 @@ class Home01 extends StatelessWidget {
 
                                       usersStream
                                           .listen((QuerySnapshot snapshot) {
-                                        snapshot.docs.forEach((doc) {
+                                        for (var doc in snapshot.docs) {
                                           print('${doc.id} => ${doc.data()}');
-                                        });
+                                        }
                                       });
 
 // var document = await Firestore.instance.collection('COLLECTION_NAME').document('TESTID1');

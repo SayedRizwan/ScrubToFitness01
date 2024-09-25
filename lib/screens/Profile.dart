@@ -1,8 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:scrubtofit/screens/ChooseAge.dart';
-import 'package:scrubtofit/screens/Free_Subscribtion.dart';
+import 'package:scrubtofit/screens/Home01.dart';
 import 'dart:math';
 import 'Standard_Subscribtion.dart';
 
@@ -415,6 +414,7 @@ class Profile extends StatelessWidget {
                         left: 30,
                         top: 180,
                         child: Image.network(
+                          //set location profile icon
                           'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F05c36ef24630b1c6808f3575a863fc9a.png',
                           width: 18,
                           height: 23,
@@ -437,12 +437,27 @@ class Profile extends StatelessWidget {
                       Positioned(
                         left: 334,
                         top: 62,
-                        child: Image.network(
-                          'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F2807930545351f78b851434af63b7364.png',
-                          width: 13,
-                          height: 13,
-                          fit: BoxFit.contain,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Home01()));
+                          },
+                          child: Image.network(
+                            'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F2807930545351f78b851434af63b7364.png',
+                            width: 13,
+                            height: 1,
+                            fit: BoxFit.contain,
+                          ),
                         ),
+                        //
+                        // Image.network(
+                        //     'https://storage.googleapis.com/codeless-dev.appspot.com/uploads%2Fimages%2F0RT1WpwWiZA8xzdz6OQl%2F2807930545351f78b851434af63b7364.png',
+                        //     width: 13,
+                        //     height: 13,
+                        //     fit: BoxFit.contain,
+                        //   ),
                       ),
                       Positioned(
                         left: 75,
