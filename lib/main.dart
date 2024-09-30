@@ -7,8 +7,6 @@ import 'package:scrubtofit/screens/Home01.dart';
 
 import 'dart:async';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:scrubtofit/screens/LoginSignUp.dart';
-import 'package:scrubtofit/screens/Profile.dart';
 //import 'package:scrubtofit/signup_in_options.dart';
 
 main() async {

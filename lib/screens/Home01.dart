@@ -342,7 +342,7 @@ class Home01 extends StatelessWidget {
                             clipBehavior: Clip.none,
                             children: [
                               Positioned(
-                                left: 0,
+                                left: 0   ,
                                 top: 0,
                                 child: InkWell(
                                   onTap: () {
