@@ -7,6 +7,7 @@ import 'package:scrubtofit/screens/Home01.dart';
 
 import 'dart:async';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:scrubtofit/screens/LoginSignUp.dart';
 //import 'package:scrubtofit/signup_in_options.dart';
 
 main() async {
@@ -55,8 +56,8 @@ class SplashScreenState extends State<SplashScreen> {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const Home01(),
-            // builder: (context) => LoginSignUp(),
+            //   builder: (context) => const Home01(),
+            builder: (context) => LoginSignUp(),
           ));
     });
   }
